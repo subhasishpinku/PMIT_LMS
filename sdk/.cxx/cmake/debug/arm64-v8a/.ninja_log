@@ -1,0 +1,30 @@
+# ninja log v5
+0	10	0	clean	d5362f68e2273fd
+0	8	0	clean	d5362f68e2273fd
+0	9	0	clean	d5362f68e2273fd
+0	8	0	clean	d5362f68e2273fd
+0	20	0	clean	d5362f68e2273fd
+44	692	645024879	CMakeFiles/MegviiFacepp-jni-0.5.2.dir/megvii_facepp_jni.cpp.o	6ba93d0ecae3f3ea
+694	1268	645024879	D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/build/intermediates/cmake/debug/obj/arm64-v8a/libMegviiFacepp-jni-0.5.2.so	c1aba72217dcbfc5
+0	9	0	clean	d5362f68e2273fd
+0	10	0	clean	d5362f68e2273fd
+0	10	0	clean	d5362f68e2273fd
+0	18	0	clean	d5362f68e2273fd
+0	8	0	clean	d5362f68e2273fd
+0	11	0	clean	d5362f68e2273fd
+0	95	0	clean	d5362f68e2273fd
+0	300	0	clean	d5362f68e2273fd
+1	14	0	clean	d5362f68e2273fd
+26	3731	645222352	CMakeFiles/MegviiFacepp-jni-0.5.2.dir/megvii_facepp_jni.cpp.o	6ba93d0ecae3f3ea
+3732	4823	645222353	D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/build/intermediates/cmake/debug/obj/arm64-v8a/libMegviiFacepp-jni-0.5.2.so	c1aba72217dcbfc5
+0	13	0	clean	d5362f68e2273fd
+78	6848	647262717	CMakeFiles/MegviiFacepp-jni-0.5.2.dir/megvii_facepp_jni.cpp.o	6ba93d0ecae3f3ea
+6849	8416	647262718	D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/build/intermediates/cmake/debug/obj/arm64-v8a/libMegviiFacepp-jni-0.5.2.so	c1aba72217dcbfc5
+1	12	0	clean	d5362f68e2273fd
+0	7	0	clean	d5362f68e2273fd
+80	1040	647706891	CMakeFiles/MegviiFacepp-jni-0.5.2.dir/megvii_facepp_jni.cpp.o	6ba93d0ecae3f3ea
+1040	1528	647706892	D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/build/intermediates/cmake/debug/obj/arm64-v8a/libMegviiFacepp-jni-0.5.2.so	c1aba72217dcbfc5
+0	10	0	clean	d5362f68e2273fd
+0	9	0	clean	d5362f68e2273fd
+52	664	647710153	CMakeFiles/MegviiFacepp-jni-0.5.2.dir/megvii_facepp_jni.cpp.o	6ba93d0ecae3f3ea
+665	1063	647710153	D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/build/intermediates/cmake/debug/obj/arm64-v8a/libMegviiFacepp-jni-0.5.2.so	c1aba72217dcbfc5

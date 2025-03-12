@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/course_details_reviews_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pageBg"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/course_details_reviews_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:paddingTop="@dimen/margin_16"
+            android:paddingBottom="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_details_reviews_rating_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_28d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/course_details_reviews_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_rating_tv"
+                app:srb_drawBorderEnabled="false"
+                app:srb_fillColor="@color/gold"
+                app:srb_isIndicator="true"
+                app:srb_numberOfStars="5"
+                app:srb_rating="0"
+                app:srb_starBackgroundColor="@color/gray81"
+                app:srb_starCornerRadius="20"
+                app:srb_starSize="20dp"
+                app:srb_starsSeparation="0dp"
+                app:srb_stepSize="0.1" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_details_reviews_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/round_view_gray_corner10"
+                android:fontFamily="@font/regular"
+                android:paddingStart="@dimen/margin_8"
+                android:paddingEnd="@dimen/margin_8"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_rating_bar"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_details_reviews_content_quality_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/content_quality"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_count_tv"
+                tools:ignore="SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/course_details_reviews_content_quality_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:indeterminate="false"
+                android:max="5"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:progressDrawable="@drawable/progress_drawable_gold"
+                android:progressTint="@color/gold"
+                app:layout_constraintBottom_toBottomOf="@+id/course_details_reviews_content_quality_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/course_details_reviews_content_quality_tv"
+                app:layout_constraintTop_toTopOf="@+id/course_details_reviews_content_quality_tv" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_details_reviews_instructor_skills_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/instructor_skills"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_content_quality_tv"
+                tools:ignore="SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/course_details_reviews_instructor_skills_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:indeterminate="false"
+                android:max="5"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:progressDrawable="@drawable/progress_drawable_gold"
+                android:progressTint="@color/gold"
+                app:layout_constraintBottom_toBottomOf="@+id/course_details_reviews_instructor_skills_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/course_details_reviews_instructor_skills_tv"
+                app:layout_constraintTop_toTopOf="@+id/course_details_reviews_instructor_skills_tv" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_details_reviews_purchase_worth_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/purchase_worth"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_instructor_skills_tv"
+                tools:ignore="SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/course_details_reviews_purchase_worth_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:indeterminate="false"
+                android:max="5"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:progressDrawable="@drawable/progress_drawable_gold"
+                android:progressTint="@color/gold"
+                app:layout_constraintBottom_toBottomOf="@+id/course_details_reviews_purchase_worth_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/course_details_reviews_purchase_worth_tv"
+                app:layout_constraintTop_toTopOf="@+id/course_details_reviews_purchase_worth_tv" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_details_reviews_support_quality_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/support_quality"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_purchase_worth_tv"
+                tools:ignore="SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/course_details_reviews_support_quality_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:indeterminate="false"
+                android:max="5"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:progressDrawable="@drawable/progress_drawable_gold"
+                android:progressTint="@color/gold"
+                app:layout_constraintBottom_toBottomOf="@+id/course_details_reviews_support_quality_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/course_details_reviews_support_quality_tv"
+                app:layout_constraintTop_toTopOf="@+id/course_details_reviews_support_quality_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/course_details_reviews_empty_state"
+            layout="@layout/empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_container" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/course_details_reviews_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_10"
+            android:nestedScrollingEnabled="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_details_reviews_header_container" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

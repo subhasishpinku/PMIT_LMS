@@ -1,0 +1,148 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Defaultstyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.Rating" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="AppThemeDs" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MyCardViewStyle">
+        <item name="cardBackgroundColor">#6A5B73</item>
+        <item name="cardViewStyle">@style/MyCardViewStyle</item>
+    </style>
+    <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cutt" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+    <style name="CustomDropDownTilStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorAccent</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="boxCornerRadiusBottomEnd">3dp</item>
+        <item name="boxCornerRadiusBottomStart">3dp</item>
+        <item name="boxCornerRadiusTopEnd">3dp</item>
+        <item name="boxCornerRadiusTopStart">3dp</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TabLayoutTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="ActivityBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowBackground">@drawable/loadingg</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="ActivityBaseTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="photo_tip_popup_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popup_tip_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_tip_out</item>
+    </style>
+
+    <style name="photo_more_popup_anim_style">
+        <item name="android:windowEnterAnimation">@anim/photo_more_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/photo_more_popup_out</item>
+    </style>
+
+    <!--For DiscreteSeekBar-->
+    <style name="Widget.DiscreteSeekBar" parent="android:Widget">
+        <item name="dsb_indicatorTextAppearance">@style/Widget.DiscreteIndicatorTextAppearance
+        </item>
+        <item name="dsb_progressColor">@color/dsb_progress_color_list</item>
+        <item name="dsb_trackColor">@color/dsb_track_color_list</item>
+        <item name="dsb_rippleColor">@color/dsb_ripple_color_list</item>
+        <item name="dsb_indicatorColor">@color/dsb_progress_color</item>
+        <item name="dsb_indicatorElevation">4dp</item>
+        <item name="dsb_mirrorForRtl">true</item>
+    </style>
+
+    <style name="Widget.DiscreteIndicatorTextAppearance" parent="android:TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:padding">6dp</item>
+    </style>
+    <style name="TextInputLayoutStyle"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/green</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+
+
+<!--      &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="AppTheme" parent="Theme.MaterialComponents.Light">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="actionBarTheme">@style/MyApp.ActionBarTheme</item>-->
+<!--        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>-->
+<!--    </style>-->
+
+
+
+
+
+    <declare-styleable name="AutoRatioImageView">
+        <!-- -ratio 高/宽 -->
+        <attr name="ratio" format="float" />
+        <attr name="prefer" format="integer" />
+    </declare-styleable>
+
+</resources>

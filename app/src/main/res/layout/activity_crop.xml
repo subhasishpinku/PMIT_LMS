@@ -1,0 +1,24 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:background="@drawable/gallery_icon"
+        android:id="@+id/quick_start_cropped_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:onClick="onSelectImageClick"
+        android:layout_weight="1"/>
+<!--    <ImageView-->
+<!--        android:background="@drawable/image_crop"-->
+<!--        android:layout_width="40sp"-->
+<!--        android:layout_height="40sp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:onClick="onSelectImageClick"-->
+<!--        android:text="Start Activity"/>-->
+</LinearLayout>

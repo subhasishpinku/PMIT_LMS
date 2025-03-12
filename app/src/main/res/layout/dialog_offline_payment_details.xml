@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/offlinePaymentDetailsCancelBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/offline_payment_details"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/textsize_15d" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/offlinePaymentDetailsAmountEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:digits="0123456789."
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:hint="@string/amount"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/gull_gray"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/offlinePaymentDetailsBankSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edtx_height_size"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/round_view_white_with_border_corner20"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect_corner_20"
+                    android:paddingHorizontal="45dp"
+                    android:paddingStart="45dp"
+                    android:paddingEnd="45dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    app:layout_constraintBottom_toBottomOf="@+id/offlinePaymentDetailsBankSpinner"
+                    app:layout_constraintStart_toStartOf="@+id/offlinePaymentDetailsBankSpinner"
+                    app:layout_constraintTop_toTopOf="@+id/offlinePaymentDetailsBankSpinner"
+                    app:srcCompat="@drawable/ic_profile" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:layout_constraintBottom_toBottomOf="@+id/offlinePaymentDetailsBankSpinner"
+                    app:layout_constraintEnd_toEndOf="@+id/offlinePaymentDetailsBankSpinner"
+                    app:layout_constraintTop_toTopOf="@+id/offlinePaymentDetailsBankSpinner"
+                    app:srcCompat="@drawable/ic_arrow_bottom_gray" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/offlinePaymentDetailsReferenceEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:hint="@string/reference"
+                android:inputType="text"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/gull_gray"
+                android:textSize="@dimen/textsize_15d" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/offlinePaymentDetailsDateTimeTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_ticket"
+                android:drawablePadding="@dimen/margin_16"
+                android:focusable="true"
+                android:fontFamily="@font/regular"
+                android:foreground="@drawable/ripple_effect_corner_20"
+                android:gravity="start|center_vertical"
+                android:hint="@string/date_and_time"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/gull_gray"
+                android:textSize="@dimen/textsize_15d" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:background="@drawable/round_view_white_top_corner20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/offlinePaymentDetailsSubmitBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:enabled="false"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_13d"
+                    app:backgroundTint="@color/button_selector"
+                    app:cornerRadius="@dimen/btn_corner_radius"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/offlinePaymentDetailsBankInfoBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/rippleColor"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/offlinePaymentDetailsBankInfoBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/bank_info"
+                    android:textAllCaps="false"
+                    android:textColor="@color/accent"
+                    android:textSize="@dimen/textsize_13d"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="@dimen/btn_corner_radius"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/offlinePaymentDetailsSubmitBtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/rippleColor"
+                    app:strokeColor="@color/accent"
+                    app:strokeWidth="1dp"
+                    tools:ignore="SpUsage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/quizOverviewStartBtnContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizOverviewTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizOverviewDescTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizOverviewTitleTv"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quizOverviewImg"
+                app:layout_constraintTop_toBottomOf="@+id/quizOverviewDescTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin_100"
+                app:srcCompat="@drawable/quiz"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/quizOverviewGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/quizOverviewTotalMarkImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_100"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizOverviewImg"
+                app:srcCompat="@drawable/ic_star_circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/total_mark"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewTotalMarkImg"
+                app:layout_constraintTop_toTopOf="@+id/quizOverviewTotalMarkImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizOverviewTotalMarkTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/quizOverviewTotalMarkImg"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewTotalMarkImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/quizOverviewPassMarkImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_100"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/quizOverviewGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/quizOverviewImg"
+                app:srcCompat="@drawable/ic_done" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/pass_mark"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewPassMarkImg"
+                app:layout_constraintTop_toTopOf="@+id/quizOverviewPassMarkImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizOverviewPassMarkTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/quizOverviewPassMarkImg"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewPassMarkImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/quizOverviewAttemptsImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizOverviewTotalMarkImg"
+                app:srcCompat="@drawable/ic_plus2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/attempts"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewAttemptsImg"
+                app:layout_constraintTop_toTopOf="@+id/quizOverviewAttemptsImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizOverviewAttemptsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/quizOverviewAttemptsImg"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewAttemptsImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/quizOverviewTimeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/quizOverviewGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/quizOverviewPassMarkImg"
+                app:srcCompat="@drawable/ic_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/time"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewTimeImg"
+                app:layout_constraintTop_toTopOf="@+id/quizOverviewTimeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizOverviewTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/quizOverviewTimeImg"
+                app:layout_constraintStart_toEndOf="@+id/quizOverviewTimeImg"
+                tools:ignore="SpUsage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/quizOverviewStartBtnContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quizOverviewStartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/start"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_16">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/selectionHeaderTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="@string/select_country"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/selectionHeaderCancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect_circular"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/selectionHeaderTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/selectionHeaderTv"
+                app:srcCompat="@drawable/ic_x_black" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/selectionSearchEdtx"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/bordered_view"
+                android:drawableStart="@drawable/ic__search"
+                android:drawablePadding="@dimen/padding_10"
+                android:fontFamily="@font/medium"
+                android:gravity="start|center_vertical"
+                android:hint="@string/search_country_code"
+                android:inputType="text"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="2dp"
+                android:textColor="@color/text_color2"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectionHeaderTv" />
+
+            <ProgressBar
+                android:id="@+id/selectionProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/selectionRv"
+                app:layout_constraintEnd_toEndOf="@id/selectionRv"
+                app:layout_constraintStart_toStartOf="@id/selectionRv"
+                app:layout_constraintTop_toTopOf="@+id/selectionRv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selectionRv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectionSearchEdtx"
+                app:layout_constraintVertical_bias="0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/selectionCancelBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                android:fontFamily="@font/regular"
+                android:minWidth="170dp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_15d"
+                android:visibility="gone"
+                app:backgroundTint="@color/accent"
+                app:cornerRadius="@dimen/btn_corner_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:rippleColor="@color/rippleColor"
+                tools:ignore="SpUsage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

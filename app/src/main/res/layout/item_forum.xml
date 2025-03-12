@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_forum_pin_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:background="@drawable/circle_orange"
+        android:elevation="0.1dp"
+        android:padding="7dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/item_forum_card"
+        app:layout_constraintEnd_toEndOf="@+id/item_forum_card"
+        app:layout_constraintTop_toTopOf="@+id/item_forum_card"
+        app:srcCompat="@drawable/ic_bookmark" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_forum_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect_corner_20"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_16">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_forum_user_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_user_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintBottom_toTopOf="@+id/item_forum_date_time_tv"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_user_img"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_user_img"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_date_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="@+id/item_forum_user_img"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_user_img"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_user_name_tv" />
+
+
+            <!--            <com.google.android.material.textview.MaterialTextView-->
+            <!--                android:id="@+id/item_forum_answers_count_tv"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/margin_8"-->
+            <!--                android:layout_marginBottom="@dimen/margin_4"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:fontFamily="@font/regular"-->
+            <!--                android:includeFontPadding="false"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:textColor="@color/text_color3"-->
+            <!--                android:textSize="@dimen/textsize_11d"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/item_forum_user_img"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_forum_more_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_8"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:foreground="@drawable/ripple_effect_circular"
+                android:padding="@dimen/padding_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_forum_user_img"
+                app:srcCompat="@drawable/ic_more" />
+
+
+            <LinearLayout
+                android:id="@+id/item_forum_resolved_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_view_accent_corner20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_user_img">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:background="@drawable/circle_white"
+                    android:elevation="0.1dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/item_forum_card"
+                    app:layout_constraintEnd_toEndOf="@+id/item_forum_card"
+                    app:layout_constraintTop_toTopOf="@id/item_forum_card"
+                    app:srcCompat="@drawable/ic_check_green" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/resolved"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_13d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_forum_user_img" />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_question_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_user_img" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_question_desc_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_question_title_tv" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_forum_question_answer_user_img1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/circle_gray"
+                android:src="@color/gray"
+                android:visibility="gone"
+                app:civ_border_overlay="true"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_question_desc_tv" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_forum_question_answer_user_img2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_gray"
+                android:elevation="0.01dp"
+                android:src="@color/gray"
+                android:visibility="gone"
+                app:civ_border_overlay="true"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="@+id/item_forum_question_answer_user_img1"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_question_answer_user_img1"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_question_answer_user_img1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_forum_question_answer_user_img3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_gray"
+                android:elevation="0.05dp"
+                android:src="@color/gray"
+                android:visibility="gone"
+                app:civ_border_overlay="true"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="@+id/item_forum_question_answer_user_img2"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_question_answer_user_img2"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_question_answer_user_img1" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_answers_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_4"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_13d"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_question_answer_user_img3"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_question_answer_user_img1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_answers_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/answers"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/item_forum_question_answer_user_img1"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_question_answer_user_img3" />
+
+
+            <View
+                android:id="@+id/item_forum_seperator"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/gray"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_question_desc_tv" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_last_activity_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_4"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_13d"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/item_forum_seperator"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_seperator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_last_activity_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/last_activity"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/item_forum_seperator"
+                app:layout_constraintStart_toStartOf="@+id/item_forum_seperator" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

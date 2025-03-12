@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/bordered_view_white_bg"
+        android:paddingStart="4dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toastImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:background="@drawable/circle_red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toastTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constraintBottom_toTopOf="@+id/toastDescTv"
+            app:layout_constraintStart_toEndOf="@+id/toastImg"
+            app:layout_constraintTop_toTopOf="@+id/toastImg"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toastDescTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintBottom_toBottomOf="@+id/toastImg"
+            app:layout_constraintStart_toEndOf="@+id/toastImg"
+            app:layout_constraintTop_toBottomOf="@+id/toastTitleTv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:background="@drawable/bordered_view_1dp"
+    android:paddingTop="@dimen/margin_8"
+    android:paddingBottom="@dimen/margin_8">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/HeaderInfoImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:background="@drawable/circle_accent"
+        android:padding="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_classes" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/HeaderInfoTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:ellipsize="end"
+        android:fontFamily="@font/medium"
+        android:maxLines="1"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/HeaderInfoDescTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/HeaderInfoImg"
+        app:layout_constraintTop_toTopOf="@id/HeaderInfoImg"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/HeaderInfoDescTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/HeaderInfoImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/HeaderInfoImg"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderInfoTitleTv"
+        tools:ignore="SpUsage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

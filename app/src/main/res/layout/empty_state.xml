@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/emptyStateMyClassesBtnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/round_view_white_top_corner20"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/emptyStateMyClassesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/my_classes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/emptyStateImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emptyStatetitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_23d"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emptyStateDescTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/emptyStateLoginBtn"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            android:visibility="gone"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+

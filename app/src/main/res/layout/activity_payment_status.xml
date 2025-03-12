@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paymentStatusConatiner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@drawable/gradient_payment_status_successful"
+    tools:context=".ui.PaymentStatusActivity">
+
+    <FrameLayout
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/circle_white_with_opacity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:id="@+id/paymentStatusImg"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderDetailsDateTimeTv"
+                app:srcCompat="@drawable/ic_bill_successful" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/paymentStatusTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:maxWidth="250dp"
+        android:text="@string/successful_payment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_20d"
+        app:fontFamily="@font/bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/paymentStatusDescTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:gravity="center"
+        android:maxWidth="250dp"
+        android:text="@string/successful_payment_desc"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_14d"
+        app:fontFamily="@font/regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentStatusTitleTv" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/paymentStatusBackBtn"
+        android:layout_width="170dp"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginTop="@dimen/margin_32"
+        android:fontFamily="@font/regular"
+        android:text="@string/my_classes_small"
+        android:textAllCaps="false"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/textsize_15d"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paymentStatusDescTv"
+        app:rippleColor="@color/rippleColor"
+        tools:ignore="SpUsage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

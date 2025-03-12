@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_forum_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_16">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_forum_answer_user_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_forum_answer_intrcutor_type_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintEnd_toEndOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintStart_toStartOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_answer_user_img"
+                app:srcCompat="@drawable/circle_accent_stroke_3dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_user_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintBottom_toTopOf="@+id/item_forum_answer_user_type_tv"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintTop_toTopOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_answer_user_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_answer_user_img"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_user_name_tv" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_forum_more_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_8"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect_circular"
+                android:padding="@dimen/padding_10"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_forum_answer_user_img"
+                app:srcCompat="@drawable/ic_more" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_answer_desc_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_user_img" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_forum_answer_attachment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_1dp"
+                android:paddingTop="@dimen/margin_8"
+                android:paddingBottom="@dimen/margin_8"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_desc_tv">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_forum_answer_attachment_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/margin_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_download_gray" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/item_forum_answer_attachment_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/download"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_13d"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toTopOf="@+id/item_forum_answer_attachment_desc_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/item_forum_answer_attachment_img"
+                    app:layout_constraintTop_toTopOf="@id/item_forum_answer_attachment_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/item_forum_answer_attachment_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="@id/item_forum_answer_attachment_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/item_forum_answer_attachment_img"
+                    app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_attachment_title_tv"
+                    tools:ignore="SpUsage" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_forum_answer_date_time_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_attachment_container"
+                app:srcCompat="@drawable/ic_calendar" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forum_answer_date_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginTop="@dimen/margin_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_forum_answer_date_time_img"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_attachment_container" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_forum_answer_pin_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/circle_orange"
+                android:padding="7dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_desc_tv"
+                app:srcCompat="@drawable/ic_bookmark" />
+
+            <LinearLayout
+                android:id="@+id/item_forum_answer_resolved_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:background="@drawable/round_view_accent_corner20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_forum_answer_pin_img"
+                app:layout_constraintTop_toBottomOf="@+id/item_forum_answer_desc_tv">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:background="@drawable/circle_white"
+                    android:elevation="0.1dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/item_forum_card"
+                    app:layout_constraintEnd_toEndOf="@+id/item_forum_card"
+                    app:layout_constraintTop_toTopOf="@id/item_forum_card"
+                    app:srcCompat="@drawable/ic_check_green" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/resolved"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_13d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_forum_user_img" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

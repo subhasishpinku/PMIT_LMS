@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/finalizeReserveMeetingCancelBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:paddingTop="4dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="false"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/finalize_reservation"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_20d" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:text="@string/selected_time"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_12d" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/finalizeReserveMeetingSelectedTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:includeFontPadding="true"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_1dp"
+                android:padding="@dimen/margin_16">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingDetailsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="true"
+                    android:text="@string/meeting_details"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_14d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingOnlineRateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:text="@string/online_meeting_hourly_rate"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingDetailsTv" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingOnlinePriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingDetailsTv" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingInPersionRateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:text="@string/in_person_meeting_hourly_rate"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingOnlineRateTv" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingInPersionPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingOnlineRateTv" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingGroupMeetingEnableTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:text="@string/instructor_conducts_group_meetings"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingInPersionRateTv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="true"
+                android:text="@string/conduction_type"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingInPersionRateTv" />
+
+
+            <include
+                layout="@layout/two_items_selection"
+                android:layout_width="match_parent"
+                android:id="@+id/finalizeReserveMeetingConductionSelection"
+                android:layout_height="@dimen/btn_height_no_inset"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_16" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="true"
+                android:text="@string/meeting_type"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingInPersionRateTv" />
+
+            <include
+                layout="@layout/two_items_selection"
+                android:layout_width="match_parent"
+                android:id="@+id/finalizeReserveMeetingSelection"
+                android:layout_height="@dimen/btn_height_no_inset"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_16" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/finalizeReserveMeetingParticipantsTv"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:visibility="gone"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="true"
+                android:text="@string/participants"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingInPersionRateTv" />
+
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/finalizeReserveMeetingParticipantsSeekBar"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:max="200"
+                android:min="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:progress="1"
+                android:progressDrawable="@drawable/seekbar_progress_drawable"
+                android:thumb="@drawable/seekbar_thumb" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/finalizeReserveMeetingParticipantsCountTv"
+                android:layout_gravity="left"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="true"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:maxLines="1"
+                android:background="@drawable/bordered_view_1dp_corner10"
+                android:text="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/finalizeReserveMeetingGroupDetailsContainer"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_1dp"
+                android:padding="@dimen/margin_16">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingGroupDetailsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="true"
+                    android:text="@string/group_meeting_details"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_14d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingHourlyRateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:text="@string/meeting_hourly_rate"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingGroupDetailsTv" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingGroupHourlyPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingGroupDetailsTv" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingGroupLiveCapacityTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:text="@string/group_live_capacity"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingHourlyRateTv" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/finalizeReserveMeetingGroupLiveCapacityValTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="true"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingHourlyRateTv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="true"
+                android:text="@string/descrption"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/finalizeReserveMeetingInPersionRateTv" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/finalizeReserveMeetingDescEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_1dp"
+                android:fontFamily="@font/regular"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:minHeight="80dp"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/padding_16"
+                android:paddingBottom="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finalizeReserveMeetingDialogAddBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_margin="@dimen/margin_16"
+                android:enabled="false"
+                android:fontFamily="@font/regular"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13d"
+                app:backgroundTint="@color/button_selector"
+                app:cornerRadius="@dimen/btn_corner_radius"
+                app:rippleColor="@color/rippleColor"
+                tools:ignore="SpUsage" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

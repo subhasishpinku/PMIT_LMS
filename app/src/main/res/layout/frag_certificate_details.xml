@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/certificateDetailsBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pageBg">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:maxLines="5"
+                app:layout_constrainedWidth="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsTitleTv"
+                tools:ignore="SpUsage" />
+
+            <com.online.course.ui.widget.RoundishImageView
+                android:id="@+id/certificateDetailsImg"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_32"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:scaleType="fitXY"
+                app:cornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/certificateDetailsDescTv"
+                app:roundedCorners="all" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/certificateDetailsImgOverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateDetailsImg"
+                app:layout_constraintEnd_toEndOf="@+id/certificateDetailsImg"
+                app:layout_constraintHeight_percent="0.2"
+                app:layout_constraintStart_toStartOf="@+id/certificateDetailsImg"
+                app:srcCompat="@drawable/gradient_home" />
+
+
+            <ProgressBar
+                android:id="@+id/certificateDetailsImgProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateDetailsImg"
+                app:layout_constraintEnd_toEndOf="@+id/certificateDetailsImg"
+                app:layout_constraintStart_toStartOf="@+id/certificateDetailsImg"
+                app:layout_constraintTop_toTopOf="@+id/certificateDetailsImg" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsShareTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="@string/share_certificate"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_20d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/certificateDetailsImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsShareDescTv"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:text="@string/share_certificate_desc"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/certificateDetailsShareTv"
+                tools:ignore="SpUsage" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/certificateDetailsGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/certificateDetailsGradeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsShareDescTv"
+                app:srcCompat="@drawable/ic_star_circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsGradeKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/your_grade"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsGradeImg"
+                app:layout_constraintTop_toTopOf="@+id/certificateDetailsGradeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsGradeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateDetailsGradeImg"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsGradeImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/certificateDetailsPassGradeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/certificateDetailsGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsShareDescTv"
+                app:srcCompat="@drawable/ic_done" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsPassGradeKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/pass_grade"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsPassGradeImg"
+                app:layout_constraintTop_toTopOf="@+id/certificateDetailsPassGradeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsPassGradeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateDetailsPassGradeImg"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsPassGradeImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/certificateDetailsTakenDateImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsGradeImg"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsTakenDateKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/taken_date"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsTakenDateImg"
+                app:layout_constraintTop_toTopOf="@+id/certificateDetailsTakenDateImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsTakenDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateDetailsTakenDateImg"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsTakenDateImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/certificateDetailsCertIdImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/certificateDetailsGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsPassGradeImg"
+                app:srcCompat="@drawable/ic_more_circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsCertIdKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/cert_id"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsCertIdImg"
+                app:layout_constraintTop_toTopOf="@+id/certificateDetailsCertIdImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsCertIdTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateDetailsCertIdImg"
+                app:layout_constraintStart_toEndOf="@+id/certificateDetailsCertIdImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/certificateDetailsLatestStdTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/latest_std"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsTakenDateTv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/certificateDetailsLatestStdViewAllBtn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/view_all"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_12d"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsTakenDateTv"
+                app:rippleColor="@color/rippleColor" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/certificateDetailsLatestStdRv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:nestedScrollingEnabled="true"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/certificateDetailsLatestStdViewAllBtn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/certificateDetailsBtnsContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/certificateDetailsDownloadBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/download"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/certificateDetailsShareBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/certificateDetailsShareBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/certificateDetailsDownloadBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="1dp"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

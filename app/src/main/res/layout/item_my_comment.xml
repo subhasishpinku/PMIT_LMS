@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect_corner_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <com.online.course.ui.widget.RoundishImageView
+                android:id="@+id/itemMyCommentImg"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/margin_10"
+                app:cornerRadius="15dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundedCorners="all"
+                app:srcCompat="@drawable/ic_notif" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemMyCommentTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:includeFontPadding="true"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/itemMyCommentImg"
+                app:layout_constraintTop_toTopOf="@id/itemMyCommentImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemMyCommentCalendarImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="@dimen/margin_10"
+                app:layout_constraintBottom_toBottomOf="@id/itemMyCommentImg"
+                app:layout_constraintStart_toEndOf="@+id/itemMyCommentImg"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemMyCommentDateTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4"
+                android:fontFamily="@font/regular"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_9d"
+                app:layout_constraintTop_toTopOf="@+id/itemMyCommentCalendarImg"
+                app:layout_constraintBottom_toBottomOf="@id/itemMyCommentImg"
+                app:layout_constraintStart_toEndOf="@+id/itemMyCommentCalendarImg"
+                tools:ignore="SpUsage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_question_title_card"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:background="@drawable/round_view_white_corner15"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_question_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:background="@drawable/round_view_accent_corner10"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:text="@string/question_mark"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_23d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_video_white" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_question_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_13d"
+        app:layout_constrainedWidth="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@+id/item_question_img"
+        app:layout_constraintEnd_toStartOf="@+id/item_question_arrow_img"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_question_img"
+        app:layout_constraintTop_toTopOf="@id/item_question_img"
+        tools:ignore="SpUsage" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_question_arrow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_bottom_gull_gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_8"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:layout_marginBottom="@dimen/margin_8"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/itemBadgeImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toTopOf="@+id/itemBadgeTitleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBadgeTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/itemBadgeDescTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemBadgeImg" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBadgeDescTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_9d"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemBadgeTitleTv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

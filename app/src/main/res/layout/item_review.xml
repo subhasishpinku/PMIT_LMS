@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_review_user_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@drawable/circle_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_review_user_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constraintStart_toEndOf="@+id/item_review_user_img"
+            app:layout_constraintTop_toTopOf="@+id/item_review_user_img" />
+
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:id="@+id/item_review_user_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/item_review_user_img"
+            app:layout_constraintStart_toEndOf="@+id/item_review_user_img"
+            app:srb_drawBorderEnabled="false"
+            app:srb_fillColor="@color/gold"
+            android:layout_marginStart="@dimen/margin_8"
+            app:srb_isIndicator="true"
+            app:srb_numberOfStars="5"
+            app:srb_rating="0"
+            app:srb_starBackgroundColor="@color/gray81"
+            app:srb_starCornerRadius="15"
+            app:srb_starSize="15dp"
+            app:srb_starsSeparation="0dp"
+            app:srb_stepSize="0.1" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_review_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_review_user_img"
+            app:layout_constraintBottom_toTopOf="@+id/item_review_date_tv"
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_review_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_9d"
+            android:layout_marginBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_review_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1"
+            tools:ignore="SpUsage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

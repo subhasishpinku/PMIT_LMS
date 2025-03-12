@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.online.course.ui.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gatewayGridContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/margin_8"
+    android:background="@drawable/bg_transition_white_to_green"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_effect_corner_20"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gatewayGridIconImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gatewayGridTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gatewayGridIconImg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_color4"
+        android:textSize="@dimen/textsize_14d" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gatewayGridAmountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gatewayGridTitleTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_16"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingEnd="6dp"
+        android:visibility="gone"
+        android:paddingStart="6dp"
+        android:background="@drawable/round_view_gray_corner10"
+        android:fontFamily="@font/regular"
+        android:gravity="center_horizontal"
+        android:textColor="@color/gull_gray"
+        android:textSize="@dimen/textsize_14d" />
+
+</com.online.course.ui.widget.SquareLayout>

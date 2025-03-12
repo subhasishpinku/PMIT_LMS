@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/saas_package_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_1dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/saas_package_active_plan_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-8dp"
+                android:background="@drawable/circle_light_green"
+                android:padding="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/saas_package_active_plan_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_shield_done_light_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/saas_package_activation_date_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_blue"
+                android:padding="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/saas_package_activation_date_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_plus2_blue" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/saas_package_remained_days_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_yellow"
+                android:padding="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/saas_package_remained_days_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_calendar_yellow" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saas_package_active_plan_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/saas_package_active_plan_key_tv"
+                app:layout_constraintEnd_toEndOf="@+id/saas_package_active_plan_img"
+                app:layout_constraintStart_toStartOf="@+id/saas_package_active_plan_img"
+                app:layout_constraintTop_toBottomOf="@+id/saas_package_active_plan_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saas_package_activation_date_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/saas_package_activation_date_key_tv"
+                app:layout_constraintEnd_toEndOf="@+id/saas_package_activation_date_img"
+                app:layout_constraintStart_toStartOf="@+id/saas_package_activation_date_img"
+                app:layout_constraintTop_toBottomOf="@+id/saas_package_activation_date_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saas_package_remained_days_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/saas_package_remained_days_key_tv"
+                app:layout_constraintEnd_toEndOf="@+id/saas_package_remained_days_img"
+                app:layout_constraintStart_toStartOf="@+id/saas_package_remained_days_img"
+                app:layout_constraintTop_toBottomOf="@+id/saas_package_remained_days_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saas_package_active_plan_key_tv"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="@string/active_plan"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/saas_package_active_plan_img"
+                app:layout_constraintStart_toStartOf="@+id/saas_package_active_plan_img"
+                app:layout_constraintTop_toBottomOf="@+id/saas_package_remained_days_tv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saas_package_activation_date_key_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="@string/activation_date"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/saas_package_activation_date_img"
+                app:layout_constraintStart_toStartOf="@+id/saas_package_activation_date_img"
+                app:layout_constraintTop_toBottomOf="@+id/saas_package_activation_date_tv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/saas_package_remained_days_key_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="@string/remained_days"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/saas_package_remained_days_img"
+                app:layout_constraintStart_toStartOf="@+id/saas_package_remained_days_img"
+                app:layout_constraintTop_toBottomOf="@+id/saas_package_remained_days_tv"
+                tools:ignore="SpUsage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/saas_package_empty_state"
+            layout="@layout/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saas_package_account_statistics_rv"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_32" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/saas_package_account_statistics_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saas_package_header_container"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/account_statistics"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="SpUsage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/saas_package_account_statistics_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saas_package_account_statistics_tv"
+            android:nestedScrollingEnabled="true"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/saas_package_plan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saas_package_account_statistics_rv"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/select_a_plan"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="SpUsage" />
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/saas_package_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saas_package_plan_tv"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:padding="@dimen/zero" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/saas_package_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saas_package_view_pager"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_24"
+            android:padding="@dimen/zero"
+            app:dotsColor="@color/gray81"
+            app:dotsSize="10dp"
+            app:dotsSpacing="5dp"
+            app:dotsWidthFactor="2.5"
+            app:layout_constraintVertical_bias="0.5"
+            app:progressMode="false"
+            app:selectedDotColor="@color/accent" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:paddingStart="@dimen/margin_16"
+    android:paddingEnd="@dimen/margin_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verifyAccountTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="@string/account_verification"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_28d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verifyAccountDescTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="@string/account_verification_desc"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyAccountTitleTv"
+            tools:ignore="SpUsage" />
+
+        <LinearLayout
+            android:id="@+id/verifyAccountCodeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_100"
+            app:layout_constraintTop_toBottomOf="@+id/verifyAccountDescTv">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:outlineSpotShadowColor="@color/lightGray2"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/verificationCodeFirstEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textCursorDrawable="@android:color/transparent"
+                    android:textSize="@dimen/textsize_23d"
+                    app:boxStrokeWidth="1dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:outlineSpotShadowColor="@color/lightGray2"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/verificationCodeSecondEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textCursorDrawable="@android:color/transparent"
+                    android:textSize="@dimen/textsize_23d" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:outlineSpotShadowColor="@color/lightGray2"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/verificationCodeThirdEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textCursorDrawable="@android:color/transparent"
+                    android:textSize="@dimen/textsize_23d" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:outlineSpotShadowColor="@color/lightGray2"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/verificationCodeFourthEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textCursorDrawable="@android:color/transparent"
+                    android:textSize="@dimen/textsize_23d" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:outlineSpotShadowColor="@color/lightGray2"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/verificationCodeFifthEdtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textCursorDrawable="@android:color/transparent"
+                    android:textSize="@dimen/textsize_23d" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verifyAccountBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/verify_my_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyAccountCodeLayout"
+            app:rippleColor="@color/rippleColor"
+            app:layout_constraintVertical_bias="0.4"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verifyAccountErrorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="@string/invalid_verification_code"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_14d"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyAccountBtn"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verifyAccountCodeNotReceviedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="@string/code_not_received"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verifyAccountErrorTv"
+            tools:ignore="SpUsage" />
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="200dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/resendBtn"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/resendBtn">-->
+
+        <!--            <com.robinhood.ticker.TickerView-->
+        <!--                android:id="@+id/timeToResendTickerView"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:text="00:00"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/text_color"-->
+        <!--                android:textSize="@dimen/textsize_17d" />-->
+
+        <!--            <com.google.android.material.textview.MaterialTextView-->
+        <!--                android:id="@+id/resendTv"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:layout_marginStart="@dimen/margin_4"-->
+        <!--                android:fontFamily="@font/sf_pro_display_bold"-->
+        <!--                android:text="@string/send_code_again"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/text_color"-->
+        <!--                android:textSize="@dimen/textsize_17d" />-->
+
+        <!--        </LinearLayout>-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verifyAccountResendBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="@string/resend_code"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyAccountCodeNotReceviedTv"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="editor_size">35dp</dimen>
+    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="top_tool_icon_width">50dp</dimen>
+    <dimen name="nav_drawer_width">260dp</dimen>
+    <dimen name="drawer_header_layout_height">180dp</dimen>
+    <dimen name="text_size_36">18sp</dimen>
+    <dimen name="text_size_34">17sp</dimen>
+    <dimen name="text_size_32">16sp</dimen>
+    <dimen name="text_size_30">15sp</dimen>
+    <dimen name="text_size_28">14sp</dimen>
+    <dimen name="text_size_26">13sp</dimen>
+    <dimen name="text_size_24">12sp</dimen>
+    <dimen name="text_size_22">11sp</dimen>
+    <dimen name="text_size_20">10sp</dimen>
+    <dimen name="stroke_size">3dp</dimen>
+    <dimen name="activity_title_hight">70dp</dimen>
+    <dimen name="editItem_textSzie0">20sp</dimen>
+</resources>

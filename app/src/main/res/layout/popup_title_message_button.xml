@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/xml_white_popup_box">
+
+        <TextView
+            android:id="@+id/tv_popup_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_popup_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri_normal"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_below="@id/tv_popup_title"
+            android:text="Text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_popup_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center"
+            android:layout_below="@id/tv_popup_message"
+            android:text="Text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_popup_result"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/divider_1"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="Ok"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/calibri_bold"
+            android:background="@drawable/xml_red_box" />
+
+    </RelativeLayout>
+
+</LinearLayout>

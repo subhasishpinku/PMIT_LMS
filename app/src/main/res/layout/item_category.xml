@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemCategoryImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:background="@drawable/circle_light_gray"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/itemCategoryImgBottomDash"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dash_connector"
+        android:rotation="90"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/itemCategoryImg"
+        app:layout_constraintStart_toStartOf="@+id/itemCategoryImg"
+        app:layout_constraintTop_toBottomOf="@+id/itemCategoryImg" />
+
+    <View
+        android:id="@+id/itemCategoryCircleImgTopDash"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:background="@drawable/dash_connector"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/itemCategoryCircleImg"
+        app:layout_constraintEnd_toEndOf="@+id/itemCategoryCircleImg"
+        app:layout_constraintStart_toStartOf="@+id/itemCategoryCircleImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemCategoryCircleImg"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCategoryImg"
+        app:layout_constraintEnd_toEndOf="@+id/itemCategoryImg"
+        app:layout_constraintStart_toStartOf="@+id/itemCategoryImg"
+        app:layout_constraintTop_toTopOf="@+id/itemCategoryImg"
+        app:srcCompat="@drawable/circle_gray_stroke" />
+
+    <View
+        android:id="@+id/itemCategoryCircleImgBottomDash"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dash_connector"
+        android:rotation="90"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/itemCategoryCircleImg"
+        app:layout_constraintStart_toStartOf="@+id/itemCategoryCircleImg"
+        app:layout_constraintTop_toBottomOf="@+id/itemCategoryCircleImg" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCategoryTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/medium"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/itemCategoryDescTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/itemCategoryImg"
+        app:layout_constraintTop_toTopOf="@id/itemCategoryImg"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCategoryDescTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:fontFamily="@font/regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constraintBottom_toBottomOf="@id/itemCategoryImg"
+        app:layout_constraintStart_toEndOf="@+id/itemCategoryImg"
+        app:layout_constraintTop_toBottomOf="@+id/itemCategoryTitleTv"
+        tools:ignore="SpUsage" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemCategoryArrowImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="@id/itemCategoryImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemCategoryImg"
+        app:srcCompat="@drawable/ic_arrow_right_gull_gray"
+        tools:ignore="SpUsage" />
+
+    <View
+        android:id="@+id/itemCategoryDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

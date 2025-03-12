@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/commentDetailsStudentHeader"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/bordered_view_1dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/commentDetailsHeaderInfoImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:background="@drawable/circle_accent"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_classes" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commentDetailsHeaderInfoTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:maxLines="1"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/commentDetailsHeaderInfoDescTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/commentDetailsHeaderInfoImg"
+            app:layout_constraintTop_toTopOf="@id/commentDetailsHeaderInfoImg"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commentDetailsHeaderInfoDescTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/commentDetailsHeaderInfoImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/commentDetailsHeaderInfoImg"
+            app:layout_constraintTop_toBottomOf="@+id/commentDetailsHeaderInfoTitleTv"
+            tools:ignore="SpUsage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentDetailsUserImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:src="@color/gray"
+        android:visibility="gone"
+        app:civ_border_overlay="true"
+        app:civ_border_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/commentDetailsUserNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_14d"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/commentDetailsUserTypeTv"
+        app:layout_constraintStart_toEndOf="@+id/commentDetailsUserImg"
+        app:layout_constraintTop_toTopOf="@+id/commentDetailsUserImg"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/commentDetailsUserTypeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_11d"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/commentDetailsUserImg"
+        app:layout_constraintStart_toEndOf="@+id/commentDetailsUserImg"
+        app:layout_constraintTop_toBottomOf="@+id/commentDetailsUserNameTv"
+        tools:ignore="SpUsage" />
+
+    <ScrollView
+        android:id="@+id/commentDetailsTvScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/pageBg"
+        android:fillViewport="true"
+        android:padding="@dimen/margin_16"
+        app:layout_constraintBottom_toTopOf="@+id/commentDetailsBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentDetailsUserImg">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/commentDetailsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_12d"
+            app:layout_constraintBottom_toBottomOf="@+id/commentDetailsUserImg"
+            app:layout_constraintStart_toEndOf="@+id/commentDetailsUserImg"
+            app:layout_constraintTop_toBottomOf="@+id/commentDetailsUserNameTv"
+            tools:ignore="SpUsage" />
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/commentDetailsBtnsContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/commentDetailsReplyBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/reply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/commentDetailsReportBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/commentDetailsReportBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/report"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/commentDetailsReplyBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="1dp"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

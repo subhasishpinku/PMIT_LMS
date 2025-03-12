@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@drawable/ic_svg_ingnup">
+
+    <LinearLayout
+        android:id="@+id/lv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35sp"
+        android:weightSum="2"
+        android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardViewStyle"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut"
+            android:layout_weight="1"
+            android:id="@+id/card_edit"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardBackgroundColor="#6A5B73">
+        <RelativeLayout
+            android:background="@drawable/ic_rectangle_51"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nnameEdit"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingTop="20sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:hint="Name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEdit"
+                    android:imeOptions="actionNext"
+                    android:drawableLeft="@drawable/ic_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mmobileEdit"
+                android:layout_below="@+id/nnameEdit"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingTop="15sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:hint="Mobile No"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobileEdit"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:inputType="phone"
+                    android:imeOptions="actionNext"
+                    android:digits="0123456789+"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/eemailEdit"
+                android:layout_below="@+id/mmobileEdit"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingTop="15sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:hint="Email Id"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEdit"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ppasswordEdit"
+                android:layout_below="@+id/eemailEdit"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:layout_margin="0dp"
+                android:paddingTop="15sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:hint="Password"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEdit"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ddateEdit"
+                android:layout_below="@+id/ppasswordEdit"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingTop="10sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:hint="Date Of Birth"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateEdit"
+                    android:drawableRight="@drawable/ic_baseline_date_range_24"
+                    android:inputType="date"
+                    android:drawableLeft="@drawable/ic_dob"
+                    android:focusableInTouchMode="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:id="@+id/lv"
+                android:gravity="center"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_below="@+id/ddateEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/CustomDropDownTilStyle"
+                    app:boxBackgroundColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:hint="Country">
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/countryID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/CustomDropDownTilStyle"
+                    app:boxBackgroundColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:hint="State">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/stateId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lv1"
+                android:layout_below="@+id/lv"
+                android:background="@drawable/background"
+                android:layout_marginRight="15sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="10sp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioGroup
+                    android:layout_gravity="center"
+                    android:id="@+id/radioSexGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <RadioButton
+                        android:background="@drawable/background"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/radioMale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/radioFemale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Female" />
+
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lv2"
+                android:gravity="center"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_below="@+id/lv1"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/signUpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_sigen_up"
+                    android:text="SIGN UP"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:backgroundTint="@null"></Button>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lv3"
+        android:gravity="center"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_below="@+id/lv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/alreadyRegistered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpButton"
+            android:layout_centerInParent="true"
+            android:text="Already Register?"
+            android:textColor="@color/white"
+            android:textSize="18sp"></TextView>
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginLeft="5sp"
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/alreadyRegistered"
+            android:layout_centerInParent="true"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="18sp"></TextView>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/lvv8"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tram"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and conditions"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="privacy policy"
+            android:textColor="@color/white"
+            android:textSize="15sp"></TextView>
+    </RelativeLayout>
+</RelativeLayout>

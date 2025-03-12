@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemCourseContainer"
+    android:layout_width="160dp"
+    android:layout_height="210dp"
+    android:layout_marginStart="@dimen/margin_8"
+    android:layout_marginEnd="@dimen/margin_8"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_effect">
+
+    <com.online.course.ui.widget.RoundishImageView
+        android:id="@+id/itemCourseImg"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCorners="all" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/itemCourseImgOverlay"
+        android:visibility="invisible"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCourseImg"
+        app:roundedCorners="all"
+        app:srcCompat="@drawable/gradient_home" />
+
+    <ProgressBar
+        android:id="@+id/itemCourseImgProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:background="@drawable/bordered_view_white_1dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:progress="10"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:progressTint="@color/orange"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCourseImg"
+        app:layout_constraintEnd_toEndOf="@+id/itemCourseImg"
+        app:layout_constraintStart_toStartOf="@+id/itemCourseImg" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/round_view_white_corner10"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/margin_8"
+        app:layout_constraintStart_toStartOf="@+id/itemCourseImg"
+        app:layout_constraintTop_toTopOf="@+id/itemCourseImg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_4"
+            app:srcCompat="@drawable/ic_star_gold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemCourseRatingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_4"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintStart_toEndOf="@+id/itemMeetingCalendarImg"
+            app:layout_constraintTop_toTopOf="@+id/itemCourseUserImg"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemCourseAddToCalendarImg"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="@drawable/round_view_white_corner10"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect_corner_10"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/itemCourseImg"
+        app:layout_constraintTop_toTopOf="@+id/itemCourseImg"
+        app:srcCompat="@drawable/ic_bell" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCourseTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:ellipsize="end"
+        android:fontFamily="@font/bold"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemCourseImg"
+        tools:ignore="SpUsage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemCourseUserImg"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemCourseTitleTv"
+        app:srcCompat="@drawable/ic_profile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCourseUserNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_9d"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@id/itemCourseUserImg"
+        app:layout_constraintStart_toEndOf="@+id/itemCourseUserImg"
+        app:layout_constraintTop_toTopOf="@+id/itemCourseUserImg"
+        app:layout_constraintEnd_toStartOf="@+id/itemCourseCalendarImg"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constrainedWidth="true"
+        tools:ignore="SpUsage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemCourseCalendarImg"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        app:layout_constraintStart_toEndOf="@+id/itemCourseUserNameTv"
+        app:layout_constraintTop_toBottomOf="@id/itemCourseTitleTv"
+        app:layout_constraintEnd_toStartOf="@+id/itemCourseDateDurationTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:srcCompat="@drawable/ic_calendar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCourseDateDurationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:maxLines="1"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_9d"
+        app:layout_constraintTop_toTopOf="@+id/itemCourseUserImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemCourseCalendarImg"
+        app:layout_constraintHorizontal_bias="0"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCourseTypeDiscountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:background="@drawable/round_view_accent_corner10_op30"
+        android:fontFamily="@font/regular"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="2dp"
+        android:maxLines="1"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_9d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCoursePriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:fontFamily="@font/regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/textsize_15d"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/itemCoursePriceWithDiscountTv"
+        app:layout_constraintEnd_toStartOf="@+id/itemCourseTypeDiscountTv"
+        app:layout_constrainedWidth="true"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemCoursePriceWithDiscountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:fontFamily="@font/regular"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemCoursePriceTv"
+        tools:ignore="SpUsage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

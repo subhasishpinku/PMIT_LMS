@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/blogs_categories_cancel_btn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_10"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/blogs_categories_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:fontFamily="@font/bold"
+                android:text="@string/blog_categories"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_20d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/blogs_categories_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blogs_categories_tv"
+                android:layout_below="@+id/blogs_categories_tv"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/blogs_categories_rv_progress_bar"
+                app:layout_constraintStart_toStartOf="@+id/blogs_categories_rv"
+                app:layout_constraintEnd_toEndOf="@+id/blogs_categories_rv"
+                app:layout_constraintTop_toTopOf="@+id/blogs_categories_rv"
+                app:layout_constraintBottom_toBottomOf="@+id/blogs_categories_rv"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

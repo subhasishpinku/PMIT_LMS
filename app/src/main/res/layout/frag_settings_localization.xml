@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/margin_16"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:orientation="vertical"
+        android:paddingBottom="120dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/time_zone"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/settingsLocalizationTimeZoneBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:gravity="start|center_vertical"
+                android:foreground="@drawable/ripple_effect_corner_20"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/margin_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_arrow_bottom_gray" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/country"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settingsLocalizationCountrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/margin_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_arrow_bottom_gray" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/province"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settingsLocalizationProvinceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/margin_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_arrow_bottom_gray" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/city"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settingsLocalizationCitySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/margin_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_arrow_bottom_gray" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/district"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settingsLocalizationDistrictSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/margin_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_arrow_bottom_gray" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/address"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/settingsLocalizationAddressTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/round_view_white_with_border_corner20"
+            android:fontFamily="@font/regular"
+            android:gravity="start|center_vertical"
+            android:inputType="text"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+

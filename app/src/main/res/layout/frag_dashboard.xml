@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dashboardContainer"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <FrameLayout
+            android:id="@+id/dashboardHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view_accent_bottom_corner20"
+            android:elevation="0.001dp"
+            android:paddingTop="@dimen/margin_4"
+            android:layout_alignParentTop="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dashboardInnerHeaderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:paddingStart="@dimen/margin_16"
+                android:paddingEnd="@dimen/margin_16">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dashboardHeaderTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboardHeaderNavBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dashboardHeaderNavBtn"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dashboardHeaderNavBtn"
+                    android:layout_width="@dimen/btn_height"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect_circular"
+                    android:padding="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_nav_white" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dashboardHeaderNotificatonBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/round_view_balack_opacity_corner15"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect_corner_15"
+                    android:padding="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboardHeaderNavBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/dashboardHeaderNavBtn"
+                    app:srcCompat="@drawable/ic_notif_white" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dashboardHeaderNotificatonCircleView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/circle_red"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_9d"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboardHeaderNotificatonBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/dashboardHeaderNotificatonBtn"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toStartOf="@+id/dashboardHeaderNotificatonBtn"
+                    app:layout_constraintTop_toTopOf="@+id/dashboardHeaderNotificatonBtn"
+                    app:layout_constraintVertical_bias="0.3" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dashboardHeaderCartBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/round_view_balack_opacity_corner15"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect_corner_15"
+                    android:padding="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboardHeaderNavBtn"
+                    app:layout_constraintEnd_toStartOf="@id/dashboardHeaderNotificatonBtn"
+                    app:layout_constraintTop_toTopOf="@id/dashboardHeaderNavBtn"
+                    app:srcCompat="@drawable/ic_cart" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dashboardHeaderCartCircleView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/circle_red"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_9d"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboardHeaderCartBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/dashboardHeaderCartBtn"
+                    app:layout_constraintHorizontal_bias="0.75"
+                    app:layout_constraintStart_toStartOf="@+id/dashboardHeaderCartBtn"
+                    app:layout_constraintTop_toTopOf="@+id/dashboardHeaderCartBtn"
+                    app:layout_constraintVertical_bias="0.3" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dashbaordHeaderNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_20d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dashboardHeaderNavBtn"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dashbaordHeaderDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dashbaordHeaderNameTv"
+                    tools:ignore="SpUsage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dashboardStatisticsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dashboardHeaderContainer"
+            android:layout_marginTop="-100dp"
+            android:elevation="0.002dp"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/dashboardStatisticsRv"
+            android:layout_alignParentBottom="true">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/dashboardStatisticsViewPager"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:padding="@dimen/zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dashboardStatisticsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:padding="@dimen/zero"
+                app:dotsColor="@color/gray81"
+                app:dotsSize="10dp"
+                app:dotsSpacing="5dp"
+                app:dotsWidthFactor="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dashboardStatisticsViewPager"
+                app:layout_constraintVertical_bias="0.5"
+                app:progressMode="false"
+                app:selectedDotColor="@color/accent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dashboardMonthSalesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardStatisticsIndicator"
+                tools:ignore="SpUsage" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/dashboardCubicChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/round_view_white_corner15"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardMonthSalesTv" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dashboardNoticesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/notices"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardCubicChart"
+                tools:ignore="SpUsage" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/dashboardNoticesViewPager"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:padding="@dimen/zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dashboardNoticesTv" />
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dashboardNoticesIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:padding="@dimen/zero"
+                app:dotsColor="@color/gray81"
+                app:dotsSize="10dp"
+                app:dotsSpacing="5dp"
+                app:dotsWidthFactor="2.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dashboardNoticesViewPager"
+                app:layout_constraintVertical_bias="0.5"
+                app:progressMode="false"
+                app:selectedDotColor="@color/accent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
+

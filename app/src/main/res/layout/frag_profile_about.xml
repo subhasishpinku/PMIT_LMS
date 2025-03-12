@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16">
+
+        <include
+            android:id="@+id/profileAboutOfflineHeader"
+            layout="@layout/header_info_layout"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@drawable/bordered_view"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileAboutBioTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAboutOfflineHeader" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileAboutExperiencesKeyTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/bold"
+            android:text="@string/experiences"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAboutBioTv" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileAboutExperiencesValueTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAboutExperiencesKeyTv" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileAboutEducationsKeyTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/bold"
+            android:text="@string/educations"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAboutExperiencesValueTv" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileAboutEducationsValueTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAboutEducationsKeyTv" />
+
+
+        <include
+            android:id="@+id/profileAboutEmptyState"
+            layout="@layout/empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

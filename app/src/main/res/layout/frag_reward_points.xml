@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_1dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rewardPointsRemainedImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_green"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/rewardPointsRemainedCountTv"
+                app:layout_constraintEnd_toStartOf="@+id/rewardPointsTotalImg"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_gift_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rewardPointsTotalImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_blue"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/rewardPointsTotalCountTv"
+                app:layout_constraintEnd_toStartOf="@+id/rewardPointsSpentImg"
+                app:layout_constraintStart_toEndOf="@+id/rewardPointsRemainedImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_get_gift" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rewardPointsSpentImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_red"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/rewardPointsSpentCountTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rewardPointsTotalImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_gift_red" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rewardPointsRemainedCountTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/rewardPointsRemainedCountKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/rewardPointsRemainedImg"
+                app:layout_constraintStart_toStartOf="@+id/rewardPointsRemainedImg"
+                app:layout_constraintTop_toBottomOf="@+id/rewardPointsRemainedImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rewardPointsTotalCountTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/rewardPointsTotalCountKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/rewardPointsTotalImg"
+                app:layout_constraintStart_toStartOf="@+id/rewardPointsTotalImg"
+                app:layout_constraintTop_toBottomOf="@+id/rewardPointsTotalImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rewardPointsSpentCountTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/rewardPointsSpentCountKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/rewardPointsSpentImg"
+                app:layout_constraintStart_toStartOf="@+id/rewardPointsSpentImg"
+                app:layout_constraintTop_toBottomOf="@+id/rewardPointsSpentImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rewardPointsRemainedCountKeyTv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/remained_points"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rewardPointsRemainedImg"
+                app:layout_constraintStart_toStartOf="@+id/rewardPointsRemainedImg"
+                app:layout_constraintTop_toBottomOf="@+id/rewardPointsRemainedCountTv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rewardPointsTotalCountKeyTv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/total_points"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rewardPointsTotalImg"
+                app:layout_constraintStart_toStartOf="@+id/rewardPointsTotalImg"
+                app:layout_constraintTop_toBottomOf="@+id/rewardPointsTotalCountTv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rewardPointsSpentCountKeyTv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:text="@string/spent_points"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rewardPointsSpentImg"
+                app:layout_constraintStart_toStartOf="@+id/rewardPointsSpentImg"
+                app:layout_constraintTop_toBottomOf="@+id/rewardPointsSpentCountTv"
+                tools:ignore="SpUsage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/points_history"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="SpUsage" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/rewardPointsHistoryRvProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <include
+                android:id="@+id/rewardPointsHistoryEmptyState"
+                layout="@layout/empty_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rewardPointsHistoryRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_16"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="1" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchEdtx"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_gravity="top|start"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:drawableStart="@drawable/ic_search_black"
+            android:drawablePadding="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:hint="@string/what_are_u_going_to_find"
+            android:inputType="text"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/gull_gray"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/searchSuggestedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/suggested"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_20d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchEdtx" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchRv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:minHeight="150dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchSuggestedTv" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchRvProgressBar"
+            app:layout_constraintBottom_toBottomOf="@+id/searchRv"
+            app:layout_constraintEnd_toEndOf="@+id/searchRv"
+            app:layout_constraintStart_toStartOf="@+id/searchRv"
+            app:layout_constraintTop_toTopOf="@+id/searchRv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/searchBtnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/searchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

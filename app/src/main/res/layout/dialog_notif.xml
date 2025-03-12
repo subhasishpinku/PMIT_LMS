@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_view_white_top_corner30">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/notifTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_15d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/notifDateTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notifTitleTv"
+        tools:ignore="SpUsage" />
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notifDateTimeTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/notifDescTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seperator" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/notifCloseBtn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="@dimen/margin_16"
+        android:fontFamily="@font/medium"
+        android:minWidth="170dp"
+        android:text="@string/close"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_15d"
+        app:backgroundTint="@color/accent"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notifDescTV"
+        app:rippleColor="@color/rippleColor"
+        tools:ignore="SpUsage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

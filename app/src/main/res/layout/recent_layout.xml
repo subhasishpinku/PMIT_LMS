@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--    <ScrollView android:layout_marginTop="10dp"-->
+    <!--        android:layout_width="fill_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/scrollView">-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview1"
+                android:scrollbars="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:id="@+id/lv1"
+            android:layout_below="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--    </ScrollView>-->
+
+    <LinearLayout
+        android:layout_marginBottom="60sp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--            <at.markushi.ui.CircleButton-->
+        <!--                android:layout_width="64dip"-->
+        <!--                android:layout_height="64dip"-->
+        <!--                android:src="@drawable/ic_baseline_add_24"-->
+        <!--                app:cb_color="#99CC00"-->
+        <!--                app:cb_pressedRingWidth="8dip" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="8sp"
+            android:id="@+id/recyclerview2"
+            android:scrollbars="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_marginTop="200sp"
+            android:layout_marginLeft="25sp"
+            app:backgroundTint="#99CC00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_gravity="left|center"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

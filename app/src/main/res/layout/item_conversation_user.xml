@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userChatTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:background="@drawable/item_customer_conversation_bg"
+        android:fontFamily="@font/regular"
+        android:padding="@dimen/margin_10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constraintWidth_percent="0.8"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userChatDateTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/gray81"
+        android:textSize="@dimen/textsize_14d"
+        app:layout_constraintRight_toRightOf="@+id/userChatTv"
+        app:layout_constraintTop_toBottomOf="@id/userChatTv"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

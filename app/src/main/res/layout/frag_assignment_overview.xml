@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pageBg"
+                android:paddingBottom="120dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_course_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_title_tv"
+                    tools:ignore="SpUsage" />
+
+
+                <com.online.course.ui.widget.RoundishImageView
+                    android:id="@+id/assignment_overview_course_img"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_marginEnd="@dimen/margin_40"
+                    android:scaleType="fitXY"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_course_title_tv"
+                    app:roundedCorners="all" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_course_img_overlay"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_course_img"
+                    app:layout_constraintEnd_toEndOf="@+id/assignment_overview_course_img"
+                    app:layout_constraintHeight_percent="0.15"
+                    app:layout_constraintStart_toStartOf="@+id/assignment_overview_course_img"
+                    app:srcCompat="@drawable/gradient_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/assignment_details"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_18d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/assignment_overview_course_img"
+                    tools:ignore="SpUsage" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_13d"
+                    android:visibility="gone"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/assignment_overview_tv"
+                    tools:ignore="SpUsage" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/assignment_overview_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintGuide_percent="0.5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_first_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:background="@drawable/circle_gray"
+                    android:padding="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_desc_tv"
+                    app:srcCompat="@drawable/ic_info_gray" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_first_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_first_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_first_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_first_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_first_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_first_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_second_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="@id/assignment_overview_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_desc_tv"
+                    app:srcCompat="@drawable/ic_category" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_second_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_second_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_second_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_second_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_second_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_second_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_third_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_first_mark_img"
+                    app:srcCompat="@drawable/ic_video_gray" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_third_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_third_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_third_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_third_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_third_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_third_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_forth_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="@id/assignment_overview_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_second_mark_img"
+                    app:srcCompat="@drawable/ic_wallet" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_forth_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_forth_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_forth_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_forth_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_forth_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_forth_mark_img"
+                    tools:ignore="SpUsage" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_fifth_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_third_mark_img"
+                    app:srcCompat="@drawable/ic_user" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_fifth_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_fifth_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_fifth_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_fifth_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_fifth_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_fifth_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_sixth_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="@id/assignment_overview_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_forth_mark_img"
+                    app:srcCompat="@drawable/ic_done" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_sixth_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_sixth_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_sixth_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_sixth_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_sixth_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_sixth_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_seventh_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_fifth_mark_img"
+                    app:srcCompat="@drawable/ic_time" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_seventh_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_seventh_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_seventh_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_seventh_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_seventh_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_seventh_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/assignment_overview_eighth_mark_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/circle_gray"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="@id/assignment_overview_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_sixth_mark_img"
+                    app:srcCompat="@drawable/ic_calendar" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_eighth_mark_key_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_eighth_mark_img"
+                    app:layout_constraintTop_toTopOf="@+id/assignment_overview_eighth_mark_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_eighth_mark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_12d"
+                    app:layout_constraintBottom_toBottomOf="@+id/assignment_overview_eighth_mark_img"
+                    app:layout_constraintStart_toEndOf="@+id/assignment_overview_eighth_mark_img"
+                    tools:ignore="SpUsage" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/assignment_overview_rv_header_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_seventh_mark_img"
+                    tools:ignore="SpUsage" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/assignment_overview_rv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:nestedScrollingEnabled="true"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assignment_overview_rv_header_tv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        android:elevation="0.01dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/assignment_overview_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

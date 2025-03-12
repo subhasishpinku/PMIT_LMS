@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aboutus">
+
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_marginTop="180sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardViewStyle"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut"
+            android:layout_weight="1"
+            android:id="@+id/card_deepstyle"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="10sp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardBackgroundColor="#6A5B73">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/img_edit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_group_edit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="15dp"
+                    android:text="DeepStyle"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardViewStyle"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="20sp"
+            android:layout_weight="1"
+            android:id="@+id/card_deepimage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardBackgroundColor="#6A5B73">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/img_effect"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_magic_effect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_effect"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="15dp"
+                    android:text="DeepImage"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</RelativeLayout>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/logoimageView"-->
+<!--        android:layout_width="272dp"-->
+<!--        android:layout_height="117dp"-->
+<!--        android:contentDescription="@string/DoreLogo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/logo_white_transparent" />-->
+
+<!--    <ListView-->
+<!--        android:id="@+id/mlistView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/logoimageView" />-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

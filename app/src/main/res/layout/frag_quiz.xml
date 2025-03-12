@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <View
+        android:id="@+id/quizStatusbar"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:background="@color/accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quizHeaderContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_view_accent_bottom_corner20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizStatusbar">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizHeaderTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintBottom_toBottomOf="@+id/quizHeaderBackBtn"
+            app:layout_constraintStart_toEndOf="@id/quizHeaderBackBtn"
+            app:layout_constraintTop_toTopOf="@+id/quizHeaderBackBtn"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/quizHeaderBackBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_balack_opacity_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_corner_20"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/quizHeaderProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:indicatorColor="@color/white"
+            app:indicatorSize="75dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizHeaderBackBtn"
+            app:trackColor="#90ffffff"
+            app:trackCornerRadius="@dimen/textsize_20d"
+            app:trackThickness="7dp" />
+
+        <com.robinhood.ticker.TickerView
+            android:id="@+id/quizHeaderTickerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintBottom_toBottomOf="@+id/quizHeaderProgressIndicator"
+            app:layout_constraintEnd_toEndOf="@+id/quizHeaderProgressIndicator"
+            app:layout_constraintStart_toStartOf="@id/quizHeaderProgressIndicator"
+            app:layout_constraintTop_toTopOf="@+id/quizHeaderProgressIndicator" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:scaleX="1.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/circular_wave" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:text="@string/question"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintBottom_toBottomOf="@+id/quizHeaderLinearProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/quizHeaderLinearProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/quizHeaderBackBtn"
+            app:layout_constraintVertical_bias="1"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizHeaderQuestionProgressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintBottom_toBottomOf="@+id/quizHeaderLinearProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/quizHeaderLinearProgressBar"
+            tools:ignore="SpUsage" />
+
+
+        <ProgressBar
+            android:id="@+id/quizHeaderLinearProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_24"
+            android:background="@drawable/bordered_view_white_1dp"
+            android:indeterminate="false"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizHeaderProgressIndicator" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quizQuestionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_15d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizHeaderContainer"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quizGradeTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/gull_gray"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizQuestionTv"
+        tools:ignore="SpUsage" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/quizAnswerEdtx"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/round_view_white_with_border_corner20"
+        android:fontFamily="@font/regular"
+        android:gravity="start|top"
+        android:hint="@string/type_your_answer"
+        android:inputType="textMultiLine"
+        android:paddingStart="@dimen/padding_16"
+        android:paddingTop="@dimen/padding_10"
+        android:paddingEnd="@dimen/padding_16"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/gull_gray"
+        android:textSize="@dimen/textsize_15d"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/quizBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizGradeTv"
+        app:layout_constraintVertical_bias="0" />
+
+
+    <!--    <GridView-->
+    <!--        android:id="@+id/quizAnswersGrid"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="@dimen/margin_8"-->
+    <!--        android:layout_marginBottom="@dimen/margin_8"-->
+    <!--        android:choiceMode="singleChoice"-->
+    <!--        android:drawSelectorOnTop="false"-->
+    <!--        android:fadeScrollbars="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:horizontalSpacing="15dp"-->
+    <!--        android:listSelector="@android:color/transparent"-->
+    <!--        android:numColumns="2"-->
+    <!--        android:padding="15dp"-->
+    <!--        android:scrollbars="vertical"-->
+    <!--        android:stretchMode="columnWidth"-->
+    <!--        android:verticalSpacing="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/quizBtnsContainer"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/quizGradeTv" />-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quizAnswersRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_8"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/quizBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizGradeTv"
+        app:spanCount="2" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quizBtnsContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quizPreviousBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:fontFamily="@font/regular"
+            android:text="@string/previous"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/quizNextFinishBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="1dp"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quizNextFinishBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/quizPreviousBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

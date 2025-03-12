@@ -1,0 +1,3 @@
+D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/MegviiFacepp-jni-0.5.2.dir
+D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/Digicandy Android/cuit selfi code/cuteselfi_android/sdk/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir

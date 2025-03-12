@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\Digicandy Android\cuit selfi code\cuteselfi_android\sdk\.cxx\cmake\debug\arm64-v8a'
+ninja: no work to do.

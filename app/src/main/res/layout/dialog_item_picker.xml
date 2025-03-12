@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/selectorCancelBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/selectorTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/text_color4"
+            android:textSize="@dimen/textsize_20d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/selectorSeperator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectorTitleTv" />
+
+
+        <ProgressBar
+            android:id="@+id/selectorRvProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/selectorRv"
+            app:layout_constraintEnd_toEndOf="@id/selectorRv"
+            app:layout_constraintStart_toStartOf="@id/selectorRv"
+            app:layout_constraintTop_toTopOf="@id/selectorRv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectorRv"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectorSeperator" />
+
+        <include
+            android:id="@+id/rvEmptyState"
+            layout="@layout/empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/selectorRv"
+            app:layout_constraintBottom_toBottomOf="@+id/selectorRv"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/selectorRvSelectionView"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_yellow_corner10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/selectorRv"
+            app:layout_constraintEnd_toEndOf="@id/selectorRv"
+            app:layout_constraintStart_toStartOf="@id/selectorRv"
+            app:layout_constraintTop_toTopOf="@id/selectorRv" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectorSelectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_16"
+            android:enabled="false"
+            android:fontFamily="@font/medium"
+            android:text="@string/select"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/button_selector"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectorRv"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

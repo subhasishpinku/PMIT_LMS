@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="120dp"
+            android:background="@color/pageBg">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/courseOverviewRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srb_drawBorderEnabled="false"
+                app:srb_fillColor="@color/gold"
+                app:srb_isIndicator="true"
+                app:srb_numberOfStars="5"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewRatingCountTv"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewRatingCountTv"
+                app:srb_rating="0"
+                app:srb_starBackgroundColor="@color/gray81"
+                app:srb_starCornerRadius="15"
+                app:srb_starSize="15dp"
+                app:srb_starsSeparation="0dp"
+                app:srb_stepSize="0.1" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewRatingCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_4"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewTitleTv"
+                android:background="@drawable/round_view_gray_corner10"
+                android:fontFamily="@font/regular"
+                android:paddingStart="@dimen/margin_8"
+                android:paddingEnd="@dimen/margin_8"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewRatingBar"
+                tools:ignore="SpUsage" />
+
+
+            <com.online.course.ui.widget.RoundishImageView
+                android:id="@+id/courseOverviewImg"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_marginEnd="@dimen/margin_40"
+                android:scaleType="fitXY"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewRatingBar"
+                app:roundedCorners="all" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewImgOverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewImg"
+                app:layout_constraintEnd_toEndOf="@+id/courseOverviewImg"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="@+id/courseOverviewImg"
+                app:srcCompat="@drawable/gradient_home" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_40"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/course_overview"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_18d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/courseOverviewImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/courseOverviewGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewClassIDImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewTv"
+                app:srcCompat="@drawable/ic_more_circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/class_id"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewClassIDImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewClassIDImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewClassIDTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewClassIDImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewClassIDImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewCategoryImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/courseOverviewGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewTv"
+                app:srcCompat="@drawable/ic_category" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/category"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewCategoryImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewCategoryImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewCategoryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewCategoryImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewCategoryImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewSessionsImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewClassIDImg"
+                app:srcCompat="@drawable/ic_video_gray" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/sessions"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewSessionsImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewSessionsImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewSessionsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewSessionsImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewSessionsImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewSalesImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/courseOverviewGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewCategoryImg"
+                app:srcCompat="@drawable/ic_wallet" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/sales"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewSalesImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewSalesImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewSalesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewSalesImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewSalesImg"
+                tools:ignore="SpUsage" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewStudentsImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewSessionsImg"
+                app:srcCompat="@drawable/ic_user" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/students"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewStudentsImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewStudentsImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewStudentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewStudentsImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewStudentsImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewQuizzesImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/courseOverviewGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewSalesImg"
+                app:srcCompat="@drawable/ic_done" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/quizzes"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewQuizzesImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewQuizzesImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewQuizzesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewQuizzesImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewQuizzesImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewSeventhItemImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewStudentsImg"
+                app:srcCompat="@drawable/ic_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewSeventhItemKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/duration"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewSeventhItemImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewSeventhItemImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewSeventhItemValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewSeventhItemImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewSeventhItemImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseOverviewEighthItemImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/courseOverviewGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/courseOverviewQuizzesImg"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewEighthItemKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/date_created"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewEighthItemImg"
+                app:layout_constraintTop_toTopOf="@+id/courseOverviewEighthItemImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/courseOverviewEighthItemValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/courseOverviewEighthItemImg"
+                app:layout_constraintStart_toEndOf="@+id/courseOverviewEighthItemImg"
+                tools:ignore="SpUsage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/round_view_white_top_corner20">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/courseOverviewViewBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13d"
+                app:backgroundTint="@color/accent"
+                app:cornerRadius="@dimen/btn_corner_radius"
+                app:rippleColor="@color/rippleColor"
+                tools:ignore="SpUsage" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</ScrollView>

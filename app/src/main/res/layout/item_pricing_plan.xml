@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_pricing_plan_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:background="@drawable/bordered_view_1dp"
+    android:paddingTop="@dimen/margin_8"
+    android:paddingBottom="@dimen/margin_8">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_pricing_plan_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:background="@drawable/circle_accent"
+        android:padding="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_discount_with_gradient" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_pricing_plan_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/bold"
+        android:maxLines="1"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_13d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/item_pricing_plan_desc_tv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_pricing_plan_img"
+        app:layout_constraintTop_toTopOf="@id/item_pricing_plan_img"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_pricing_plan_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/gull_gray"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="@id/item_pricing_plan_img"
+        app:layout_constraintStart_toEndOf="@+id/item_pricing_plan_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_pricing_plan_title_tv"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_pricing_plan_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="@id/item_pricing_plan_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_pricing_plan_title_tv"
+        tools:ignore="SpUsage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

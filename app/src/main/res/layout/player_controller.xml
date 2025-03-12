@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/round_view_white_corner20"
+    android:paddingStart="@dimen/padding_16"
+    android:paddingEnd="@dimen/padding_16">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/player_play_pause_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect_circular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_play_circle" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/player_controller_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/gull_gray"
+        android:textSize="@dimen/textsize_12d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player_play_pause_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/player_controller_fullscreen_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect_circular"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__fullscreen" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/player_controller_mute_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect_circular"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player_controller_fullscreen_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sound" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

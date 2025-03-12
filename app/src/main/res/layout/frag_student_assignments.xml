@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/student_assignments_pending_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_1dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/student_assignments_pending_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_yellow"
+                android:padding="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/student_assignments_pending_tv"
+                app:layout_constraintEnd_toStartOf="@+id/student_assignments_passed_img"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_more_yellow" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/student_assignments_passed_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_green"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/student_assignments_passed_tv"
+                app:layout_constraintEnd_toStartOf="@+id/student_assignments_failed_img"
+                app:layout_constraintStart_toEndOf="@+id/student_assignments_pending_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_done_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/student_assignments_failed_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_red"
+                android:padding="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/student_assignments_failed_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/student_assignments_passed_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_close_rect_red" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/student_assignments_pending_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/student_assignments_pending_key_tv"
+                app:layout_constraintEnd_toEndOf="@+id/student_assignments_pending_img"
+                app:layout_constraintStart_toStartOf="@+id/student_assignments_pending_img"
+                app:layout_constraintTop_toBottomOf="@+id/student_assignments_pending_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/student_assignments_passed_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/student_assignments_passed_key_tv"
+                app:layout_constraintEnd_toEndOf="@+id/student_assignments_passed_img"
+                app:layout_constraintStart_toStartOf="@+id/student_assignments_passed_img"
+                app:layout_constraintTop_toBottomOf="@+id/student_assignments_passed_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/student_assignments_failed_tv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/student_assignments_failed_key_tv"
+                app:layout_constraintEnd_toEndOf="@+id/student_assignments_failed_img"
+                app:layout_constraintStart_toStartOf="@+id/student_assignments_failed_img"
+                app:layout_constraintTop_toBottomOf="@+id/student_assignments_failed_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/student_assignments_pending_key_tv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/pending"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/student_assignments_pending_img"
+                app:layout_constraintStart_toStartOf="@+id/student_assignments_pending_img"
+                app:layout_constraintTop_toBottomOf="@+id/student_assignments_pending_tv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/student_assignments_passed_key_tv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/passed"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/student_assignments_passed_img"
+                app:layout_constraintStart_toStartOf="@+id/student_assignments_passed_img"
+                app:layout_constraintTop_toBottomOf="@+id/student_assignments_passed_tv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/student_assignments_failed_key_tv"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:text="@string/failed"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/student_assignments_failed_img"
+                app:layout_constraintStart_toStartOf="@+id/student_assignments_failed_img"
+                app:layout_constraintTop_toBottomOf="@+id/student_assignments_failed_tv"
+                tools:ignore="SpUsage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_16">
+
+            <ProgressBar
+                android:id="@+id/student_assignments_rv_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <include
+                android:id="@+id/student_assignments_empty_state"
+                layout="@layout/empty_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/student_assignments_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_16"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="1" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/termscondition">
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#210532"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        tools:ignore="MissingConstraints,RtlCompat"
+        android:minHeight="@dimen/abc_action_bar_default_height_material">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_marginTop="143sp"
+        android:layout_marginLeft="21sp"
+        android:layout_marginRight="27sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_edit"
+            android:layout_marginLeft="20dp"
+            android:text="General service agreement"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/lv1"
+        android:layout_below="@+id/lv"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="21sp"
+        android:layout_marginRight="27sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_edit"
+            android:layout_marginLeft="20dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam erat a odio pharetra, at egestas lectus convallis. Cras non turpis a quam volutpat egestas. Aenean sagittis fermentum enim eget malesuada. Proin nec arcu eget nibh lobortis semper id ac nunc. Aliquam risus erat, scelerisque vel mauris quis, eleifend dictum nibh. Maecenas a aliquam lectus."
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/lvv8"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardViewStyle"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cutt"
+            android:layout_weight="1"
+            android:id="@+id/card_edit"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardBackgroundColor="#6A5B73">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_box"
+                    android:textColor="@color/white"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/check_box"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5sp"
+
+                    android:text="I have read and agree to the terms of service and polic"
+                    android:textStyle="normal"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+                <CheckBox
+                    android:id="@+id/check_box1"
+                    android:layout_marginTop="10sp"
+                    android:layout_below="@+id/check_box"
+                    android:textColor="@color/white"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/check_box1"
+                    android:layout_below="@+id/check_box"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15sp"
+                    android:text="I Decline."
+                    android:textStyle="normal"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+                <Button
+                    android:id="@+id/btn_aarow"
+                    android:layout_marginTop="5sp"
+                    app:backgroundTint="@null"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/check_box"
+                    android:background="@drawable/ic_arrow"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

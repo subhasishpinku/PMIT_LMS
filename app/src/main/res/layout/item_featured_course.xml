@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/itemFeaturedContainer"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:layout_marginStart="@dimen/margin_16"
+    android:foreground="@drawable/ripple_effect_corner_20">
+
+    <com.online.course.ui.widget.RoundishImageView
+        android:id="@+id/itemFeaturedImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cornerRadius="20dp"
+        app:roundedCorners="all" />
+
+    <com.online.course.ui.widget.RoundishImageView
+        android:id="@+id/itemFeaturedImgOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_home"
+        android:visibility="invisible"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@+id/itemFeaturedImg"
+        app:layout_constraintEnd_toEndOf="@+id/itemFeaturedImg"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="@+id/itemFeaturedImg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemFeaturedPriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/round_view_white_corner10"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/textsize_12d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemFeaturedTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_4"
+        android:ellipsize="end"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_15d"
+        app:layout_constraintBottom_toTopOf="@+id/itemFeaturedRatingBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.iarcuschin.simpleratingbar.SimpleRatingBar
+        android:id="@+id/itemFeaturedRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="@+id/itemFeaturedImg"
+        app:layout_constraintBottom_toTopOf="@+id/itemFeaturedInstructorImg"
+        app:layout_constraintStart_toStartOf="@+id/itemFeaturedImg"
+        app:srb_drawBorderEnabled="false"
+        app:srb_fillColor="@color/gold"
+        app:srb_isIndicator="true"
+        app:srb_numberOfStars="5"
+        app:srb_rating="0"
+        app:srb_starBackgroundColor="@color/white"
+        app:srb_starCornerRadius="15"
+        app:srb_starSize="15dp"
+        app:srb_starsSeparation="0dp"
+        app:srb_stepSize="0.1" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/itemFeaturedInstructorImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:src="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/itemFeaturedImg"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemFeaturedInstructorNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:maxLength="100"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="@+id/itemFeaturedInstructorImg"
+        app:layout_constraintStart_toEndOf="@id/itemFeaturedInstructorImg"
+        app:layout_constraintTop_toTopOf="@+id/itemFeaturedInstructorImg" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/itemFeaturedClockImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32"
+        android:src="@drawable/ic_clock_rect"
+        app:layout_constraintBottom_toBottomOf="@id/itemFeaturedInstructorImg"
+        app:layout_constraintStart_toEndOf="@id/itemFeaturedInstructorNameTv"
+        app:layout_constraintTop_toTopOf="@+id/itemFeaturedInstructorImg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemFeaturedDurationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:maxLength="100"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/itemFeaturedClockImg"
+        app:layout_constraintEnd_toStartOf="@+id/itemFeaturedRequiredTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/itemFeaturedClockImg"
+        app:layout_constraintTop_toTopOf="@+id/itemFeaturedClockImg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemFeaturedRequiredTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/round_view_black_opacity30_corner10"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:maxLength="100"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="2dp"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="2dp"
+        android:text="@string/required"
+        android:textColor="@color/red"
+        android:textSize="@dimen/textsize_11d"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/itemFeaturedInstructorImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemFeaturedInstructorImg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

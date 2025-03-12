@@ -1,0 +1,7 @@
+Executable : D:\android\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\Digicandy Android\cuit selfi code\cuteselfi_android\sdk\.cxx\cmake\debug\armeabi-v7a
+MegviiFacepp-jni-0.5.2
+jvmArgs : 
+

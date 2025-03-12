@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/course_chapter_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="150dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_course_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:maxLines="1"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_title_tv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/course_chapter_item_player_view"
+                android:layout_width="0dp"
+                android:layout_height="270dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_course_tv"
+                app:surface_type="surface_view"
+                app:use_controller="false" />
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/course_chapter_item_youtube_player_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:maxHeight="270dp"
+                android:visibility="gone"
+                app:enableAutomaticInitialization="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_course_tv" />
+
+            <com.ct7ct7ct7.androidvimeoplayer.view.VimeoPlayerView
+                android:id="@+id/course_chapter_item_vimeo_player_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:maxHeight="270dp"
+                android:visibility="gone"
+                app:autoPlay="false"
+                app:backgroundColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_course_tv"
+                app:loop="false"
+                app:muted="false"
+                app:showFullscreenOption="false"
+                app:showMenuOption="false"
+                app:showOriginalControls="false"
+                app:showTitle="true"
+                app:topicColor="@color/accent" />
+
+
+            <!--            <WebView-->
+            <!--                android:id="@+id/course_chapter_item_web_view"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="270dp"-->
+            <!--                android:layout_marginStart="@dimen/margin_16"-->
+            <!--                android:layout_marginEnd="@dimen/margin_16"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_course_tv" />-->
+
+            <include
+                android:id="@+id/course_chapter_item_player_controller_view"
+                layout="@layout/player_controller"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_player_view" />
+
+            <include
+                android:id="@+id/course_chapter_item_access_denied_view"
+                layout="@layout/empty_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_course_tv" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/course_chapter_item_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/course_chapter_item_first_mark_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_player_controller_view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_first_mark_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_first_mark_img"
+                app:layout_constraintTop_toTopOf="@+id/course_chapter_item_first_mark_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_first_mark_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/course_chapter_item_first_mark_img"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_first_mark_img"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/course_chapter_item_second_mark_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/course_chapter_item_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_player_controller_view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_second_mark_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_second_mark_img"
+                app:layout_constraintTop_toTopOf="@+id/course_chapter_item_second_mark_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_second_mark_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/course_chapter_item_second_mark_img"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_second_mark_img"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/course_chapter_item_third_mark_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_first_mark_img" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_third_mark_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_third_mark_img"
+                app:layout_constraintTop_toTopOf="@+id/course_chapter_item_third_mark_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_third_mark_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/course_chapter_item_third_mark_img"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_third_mark_img"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/course_chapter_item_forth_mark_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/course_chapter_item_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_second_mark_img" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_forth_mark_key_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_forth_mark_img"
+                app:layout_constraintTop_toTopOf="@+id/course_chapter_item_forth_mark_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_forth_mark_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/course_chapter_item_forth_mark_img"
+                app:layout_constraintStart_toEndOf="@+id/course_chapter_item_forth_mark_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_third_mark_img"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/course_chapter_item_read_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:text="@string/read_this_lesson"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                android:thumb="@drawable/switch_custom_thumb"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_desc_tv"
+                app:track="@drawable/switch_custom_track"
+                app:useMaterialThemeColors="false" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/course_chapter_item_related_files_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:maxLines="1"
+                android:text="@string/related_files"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_15d"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_read_switch"
+                tools:ignore="SpUsage" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/course_chapter_item_related_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:nestedScrollingEnabled="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/margin_16"
+                android:paddingEnd="@dimen/padding_16"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_chapter_item_related_files_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/course_chapter_btns_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/round_view_white_top_corner20"
+        android:elevation="0.1dp"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_chapter_item_btn_container_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/course_chapter_item_start_btn_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/course_chapter_item_start_btn_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:cardCornerRadius="@dimen/btn_corner_radius"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/course_chapter_item_end_btn"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/course_chapter_item_start_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/regular"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13d"
+                app:backgroundTint="@color/button_selector"
+                app:rippleColor="@color/rippleColor"
+                tools:ignore="SpUsage" />
+
+            <ProgressBar
+                android:id="@+id/course_chapter_item_download_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_drawable_download"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/course_chapter_item_start_btn"
+                app:layout_constraintEnd_toEndOf="@+id/course_chapter_item_start_btn"
+                app:layout_constraintStart_toStartOf="@+id/course_chapter_item_start_btn"
+                app:layout_constraintTop_toTopOf="@+id/course_chapter_item_start_btn" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/course_chapter_item_end_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:textAllCaps="false"
+            android:textColor="@color/button_selector"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/course_chapter_item_play_btn"
+            app:layout_constraintStart_toEndOf="@+id/course_chapter_item_start_btn_container"
+            app:rippleColor="@color/rippleColor"
+            app:strokeColor="@color/button_selector"
+            app:strokeWidth="1dp"
+            tools:ignore="SpUsage" />
+
+
+        <ProgressBar
+            android:id="@+id/course_chapter_item_play_btn_progress_bar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:elevation="0.1dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/course_chapter_item_play_btn"
+            app:layout_constraintEnd_toEndOf="@+id/course_chapter_item_play_btn"
+            app:layout_constraintStart_toStartOf="@+id/course_chapter_item_play_btn"
+            app:layout_constraintTop_toTopOf="@+id/course_chapter_item_play_btn" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/course_chapter_item_play_btn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/round_view_accent_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_corner_20"
+            android:padding="18dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/course_chapter_item_end_btn"
+            app:srcCompat="@drawable/ic_play_white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

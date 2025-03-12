@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <com.online.course.ui.widget.RoundishImageView
+                android:id="@+id/itemCertificateImg"
+                android:layout_width="130dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:scaleType="fitXY"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundedCorners="all" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemCertificateTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/medium"
+                android:maxLines="1"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/itemCertificateImg"
+                app:layout_constraintTop_toTopOf="@id/itemCertificateImg"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemCertificateDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:maxLines="1"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/itemCertificateImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/itemCertificateImg"
+                app:layout_constraintTop_toTopOf="@id/itemCertificateImg"
+                tools:ignore="SpUsage" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemCertificateCalendarImg"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_8"
+                app:layout_constraintBottom_toBottomOf="@id/itemCertificateImg"
+                app:layout_constraintStart_toEndOf="@+id/itemCertificateImg"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemCertificateDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="@id/itemCertificateCalendarImg"
+                app:layout_constraintStart_toEndOf="@+id/itemCertificateCalendarImg"
+                app:layout_constraintTop_toTopOf="@+id/itemCertificateCalendarImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/itemCertificateTotalMarkTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:maxLines="1"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/textsize_14d"
+                app:layout_constraintBottom_toBottomOf="@id/itemCertificateCalendarImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/itemCertificateCalendarImg" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemCertificateBadgeImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_4"
+                app:layout_constraintBottom_toBottomOf="@id/itemCertificateCalendarImg"
+                app:layout_constraintEnd_toStartOf="@id/itemCertificateTotalMarkTv"
+                app:layout_constraintTop_toTopOf="@+id/itemCertificateCalendarImg"
+                app:srcCompat="@drawable/ic_badge_green" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

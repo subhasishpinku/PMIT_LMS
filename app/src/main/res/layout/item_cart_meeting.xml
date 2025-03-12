@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <com.daimajia.swipe.SwipeLayout
+            android:id="@+id/item_cart_meeting_swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Bottom View Start-->
+
+            <LinearLayout
+                android:id="@+id/bottom_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <!--What you want to show-->
+
+                <LinearLayout
+                    android:id="@+id/item_cart_meeting_remove_container"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/red"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect_corner_20_end"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="@string/remove"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_11d"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/signUpTitleTv"
+                        tools:ignore="SpUsage" />
+
+                </LinearLayout>
+
+                <!--What you want to show-->
+            </LinearLayout>
+            <!--Bottom View End-->
+
+            <!-- Surface View Start -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_cart_meeting_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <com.online.course.ui.widget.RoundishImageView
+                    android:id="@+id/item_cart_meeting_img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:scaleType="fitXY"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:roundedCorners="all" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/item_cart_meeting_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/textsize_14d"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/item_cart_meeting_img"
+                    app:layout_constraintTop_toTopOf="@id/item_cart_meeting_img"
+                    tools:ignore="SpUsage" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_cart_meeting_reservation_desc"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/item_cart_meeting_img"
+                    app:layout_constraintTop_toBottomOf="@id/item_cart_meeting_name_tv"
+                    tools:ignore="SpUsage" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_cart_meeting_calendar_img"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="@dimen/margin_10"
+                    app:layout_constraintBottom_toBottomOf="@id/item_cart_meeting_img"
+                    app:layout_constraintStart_toEndOf="@+id/item_cart_meeting_img"
+                    app:srcCompat="@drawable/ic_calendar" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/item_cart_meeting_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_4"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintBottom_toBottomOf="@id/item_cart_meeting_calendar_img"
+                    app:layout_constraintStart_toEndOf="@+id/item_cart_meeting_calendar_img"
+                    app:layout_constraintTop_toTopOf="@+id/item_cart_meeting_calendar_img"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/item_cart_meeting_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/accent"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintBottom_toBottomOf="@id/item_cart_meeting_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="SpUsage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Surface View End -->
+        </com.daimajia.swipe.SwipeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

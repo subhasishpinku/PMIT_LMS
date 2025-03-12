@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pageBg">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@null">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/meetingDetailsOuterCircleImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:background="@drawable/circle_accent"
+                    android:elevation="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_white"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintEnd_toEndOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintStart_toStartOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintTop_toTopOf="@id/meetingDetailsOuterCircleImg" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/meetingDetailsUserImg"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:elevation="1dp"
+                    android:src="@color/gray"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintEnd_toEndOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintStart_toStartOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintTop_toTopOf="@id/meetingDetailsOuterCircleImg" />
+
+                <ProgressBar
+                    android:id="@+id/settingsUserImgProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="1dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintEnd_toEndOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintStart_toStartOf="@id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintTop_toTopOf="@id/meetingDetailsOuterCircleImg" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/settingsAddOrRemovePhotoFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription=""
+                    android:outlineSpotShadowColor="@color/gray"
+                    android:src="@drawable/ic_camera"
+                    app:backgroundTint="@color/white"
+                    app:elevation="10dp"
+                    app:fabCustomSize="50dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsOuterCircleImg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/meetingDetailsUserImg" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/settingsUserNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_20d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/settingsAddOrRemovePhotoFab" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/settingsUserTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/textsize_11d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/settingsUserNameTv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/ssettingsUserTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/padding_10"
+            android:paddingEnd="@dimen/padding_10"
+            app:layout_collapseMode="pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/text_color5"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@color/rippleColor"
+            app:tabSelectedTextColor="@color/text_color5"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            app:tabTextColor="@color/text_color5" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/settingsUserViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:id="@+id/settingsSaveContainer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settingsSaveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/button_selector"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:paddingBottom="120dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsSecurityCurrentPassTv"
+            android:fontFamily="@font/regular"
+            android:text="@string/current_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/settingsSecurityCurrentPassEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/round_view_white_with_border_corner20"
+            android:fontFamily="@font/regular"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/padding_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsSecurityCurrentPassTv"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsSecurityNewPassTv"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsSecurityCurrentPassEdtx"
+            android:fontFamily="@font/regular"
+            android:text="@string/new_password"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/settingsSecurityNewPassEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginTop="@dimen/margin_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsSecurityNewPassTv"
+            android:background="@drawable/round_view_white_with_border_corner20"
+            android:fontFamily="@font/regular"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsSecurityRetypeNewPassTv"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsSecurityNewPassEdtx"
+            android:fontFamily="@font/regular"
+            android:text="@string/retype_new_password"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_11d" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/settingsSecurityRetypeNewPassEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginTop="@dimen/margin_4"
+            app:layout_constraintTop_toBottomOf="@+id/settingsSecurityRetypeNewPassTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0"
+            android:background="@drawable/round_view_white_with_border_corner20"
+            android:fontFamily="@font/regular"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

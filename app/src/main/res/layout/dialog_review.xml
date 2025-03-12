@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/review_cancel_btn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_content_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/review_the_course"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_content_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:text="@string/review_the_course_desc"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_content_title_tv" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_content_quality_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/content_quality"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintBottom_toBottomOf="@+id/review_content_quality_rating_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/review_content_quality_rating_bar"
+                tools:ignore="SpUsage" />
+
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/review_content_quality_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_content_desc_tv"
+                app:srb_drawBorderEnabled="false"
+                app:srb_fillColor="@color/gold"
+                app:srb_isIndicator="false"
+                app:srb_numberOfStars="5"
+                app:srb_rating="0"
+                app:srb_starBackgroundColor="@color/gray81"
+                app:srb_starCornerRadius="30"
+                app:srb_starSize="30dp"
+                app:srb_stepSize="1" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_content_instructor_skills_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/instructor_skills"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintBottom_toBottomOf="@+id/review_instructor_skills_rating_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/review_instructor_skills_rating_bar"
+                tools:ignore="SpUsage" />
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/review_instructor_skills_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_content_quality_rating_bar"
+                app:srb_drawBorderEnabled="false"
+                app:srb_fillColor="@color/gold"
+                app:srb_isIndicator="false"
+                app:srb_numberOfStars="5"
+                app:srb_rating="0"
+                app:srb_starBackgroundColor="@color/gray81"
+                app:srb_starCornerRadius="30"
+                app:srb_starSize="30dp"
+                app:srb_stepSize="1" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_purchase_worth_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/purchase_worth"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintBottom_toBottomOf="@+id/review_purchase_worth_rating_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/review_purchase_worth_rating_bar"
+                tools:ignore="SpUsage" />
+
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/review_purchase_worth_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_instructor_skills_rating_bar"
+                app:srb_drawBorderEnabled="false"
+                app:srb_fillColor="@color/gold"
+                app:srb_isIndicator="false"
+                app:srb_numberOfStars="5"
+                app:srb_rating="0"
+                app:srb_starBackgroundColor="@color/gray81"
+                app:srb_starCornerRadius="30"
+                app:srb_starSize="30dp"
+                app:srb_stepSize="1" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/review_support_quality_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:fontFamily="@font/regular"
+                android:text="@string/support_quality"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintBottom_toBottomOf="@+id/review_support_quality_rating_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/review_support_quality_rating_bar"
+                tools:ignore="SpUsage" />
+
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/review_support_quality_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_purchase_worth_rating_bar"
+                app:srb_drawBorderEnabled="false"
+                app:srb_fillColor="@color/gold"
+                app:srb_isIndicator="false"
+                app:srb_numberOfStars="5"
+                app:srb_rating="0"
+                app:srb_starBackgroundColor="@color/gray81"
+                app:srb_starCornerRadius="30"
+                app:srb_starSize="30dp"
+                app:srb_stepSize="1" />
+
+
+            <!--                <androidx.appcompat.widget.AppCompatRatingBar-->
+            <!--                    style="?android:attr/ratingBarStyleIndicator"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="@dimen/margin_10"-->
+            <!--                    android:isIndicator="false"-->
+            <!--                    android:max="5"-->
+            <!--                    android:min="1"-->
+            <!--                    android:stepSize="1"-->
+            <!--                    android:theme="@style/RatingBarFillStyle"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@+id/review_purchase_worth_rating_bar" />-->
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/review_message_edtx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:gravity="start|top"
+                android:hint="@string/message_body"
+                android:inputType="textMultiLine"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color3"
+                android:textColorHint="@color/gull_gray"
+                android:textSize="@dimen/textsize_13d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_support_quality_rating_bar" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/review_send_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:enabled="false"
+                android:fontFamily="@font/regular"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/send_review"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13d"
+                app:backgroundTint="@color/button_selector"
+                app:cornerRadius="@dimen/btn_corner_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/review_message_edtx"
+                app:layout_constraintVertical_bias="0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

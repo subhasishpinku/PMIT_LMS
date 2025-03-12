@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/financialSummaryHeaderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/round_view_white_corner20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/financialSummaryCreditTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_23d"
+                    app:layout_constraintBottom_toTopOf="@+id/financialSummaryCreditKeyTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/financialSummaryCreditKeyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/account_balance"
+                    android:textColor="@color/gull_gray"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintBottom_toTopOf="@id/financialSummaryChargeBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/financialSummaryCreditTv"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/financialSummaryChargeBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:fontFamily="@font/regular"
+                    android:minWidth="130dp"
+                    android:text="@string/charge"
+                    android:textAllCaps="false"
+                    android:textColor="@color/accent"
+                    android:textSize="@dimen/textsize_15d"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="@dimen/btn_corner_radius"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:rippleColor="@color/rippleColor"
+                    app:strokeColor="@color/accent"
+                    app:strokeWidth="1dp"
+                    tools:ignore="SpUsage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:background="@drawable/round_view_accent_corner20"
+                android:padding="18dp"
+                app:srcCompat="@drawable/ic_wallet_white" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/financialSummaryBalancesHistoryTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:text="@string/balances_history"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="SpUsage" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_8">
+
+            <ProgressBar
+                android:id="@+id/financialSummaryRvProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/financialSummaryRv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSummaryRv"
+                app:layout_constraintStart_toStartOf="@+id/financialSummaryRv"
+                app:layout_constraintTop_toTopOf="@+id/financialSummaryRv" />
+
+            <include
+                android:id="@+id/financialSummaryEmptyState"
+                layout="@layout/empty_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/financialSummaryBalancesHistoryTv" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/financialSummaryRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

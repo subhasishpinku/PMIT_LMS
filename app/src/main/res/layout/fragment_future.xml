@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/lv"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="RtlCompat">
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:background="#00574B" />
+            <com.dgc.photoediting.CircularImageView
+                android:id="@+id/imageview_account_profile"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_launcher"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/imageview_account_profile"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:id="@+id/floatingActionButton"
+                tools:ignore="RtlCompat" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/cameraID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/floatingActionButton"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/ic_photo_camera_black_24dp"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@+id/lv"
+        android:id="@+id/scrolView_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50sp">
+        <RelativeLayout
+            android:id="@+id/linear_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/serviceTv"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40sp"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:drawableLeft="@drawable/ic_star_border_black_24dp"
+                        android:drawableRight="@drawable/ic_star_border_black_24dp"
+                        android:text="profile Details"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary">
+
+                        <EditText
+                            android:id="@+id/usernameId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter UserName"
+                            android:imeOptions="actionNext"
+                            android:textColorHint="@color/colorPrimaryDark" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary">
+
+                        <EditText
+                            android:id="@+id/contractID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Contract Number"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"
+                            android:textColorHint="@color/colorPrimaryDark" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary">
+
+                        <EditText
+                            android:id="@+id/emailID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Email Address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="@color/colorPrimaryDark" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary">
+
+                        <EditText
+                            android:id="@+id/addressID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="@color/colorPrimaryDark" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60sp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/spinner_border"
+                        android:orientation="horizontal">
+                        <Spinner
+                            android:id="@+id/spID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/spinner_bg" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary">
+
+                        <EditText
+                            android:id="@+id/pincodeID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Pincode"
+                            android:maxLength="6"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"
+                            android:textColorHint="@color/colorPrimaryDark" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/savedetaildID"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@drawable/thred_layout"-->
+    <!--        style="@style/DefaultButton"-->
+    <!--        android:gravity="center" >-->
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:textAllCaps="true"-->
+    <!--            android:text="Save"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20sp" />-->
+    <!--    </RelativeLayout>-->
+
+<LinearLayout
+    android:gravity="center"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/savedetaildID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_group_login"
+        app:backgroundTint="@null"
+        android:gravity="center"
+        android:text=""
+        android:paddingHorizontal="100dp"
+        android:paddingVertical="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>
+
+
+</RelativeLayout>

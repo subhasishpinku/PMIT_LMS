@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketConversationHeaderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/bordered_view_1dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:foreground="@drawable/ripple_effect_corner_20"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ticketConversationHeaderInfoImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:background="@drawable/circle_accent"
+            android:padding="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_classes" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ticketConversationHeaderInfoTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:maxLines="1"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_12d"
+            android:text="@string/this_is_a_course_support"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/ticketConversationHeaderInfoDescTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/ticketConversationHeaderInfoImg"
+            app:layout_constraintTop_toTopOf="@id/ticketConversationHeaderInfoImg"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ticketConversationHeaderInfoDescTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/ticketConversationHeaderInfoImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/ticketConversationHeaderInfoImg"
+            app:layout_constraintTop_toBottomOf="@+id/ticketConversationHeaderInfoTitleTv"
+            tools:ignore="SpUsage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ticketConversationRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/ticketConversationBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ticketConversationHeaderContainer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketConversationBtnsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/round_view_white_top_corner20"
+        android:elevation="0.1dp"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ticketConversationReplyBtn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_24"
+            android:fontFamily="@font/medium"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:maxWidth="400dp"
+            android:text="@string/reply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ticketConversationCancelBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ticketConversationCancelBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_24"
+            android:background="@drawable/bordered_view_red"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_corner_10"
+            android:padding="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ticketConversationReplyBtn"
+            app:srcCompat="@drawable/ic_x_red" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

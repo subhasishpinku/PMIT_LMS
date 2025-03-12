@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/video_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:keepScreenOn="true"
+        android:visibility="gone"
+        app:surface_type="surface_view"
+        app:use_controller="true" />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:visibility="gone"
+        app:enableAutomaticInitialization="false" />
+
+    <com.ct7ct7ct7.androidvimeoplayer.view.VimeoPlayerView
+        android:id="@+id/vimeo_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_24"
+        android:visibility="gone"
+        app:autoPlay="false"
+        app:backgroundColor="@color/black"
+        app:loop="false"
+        app:muted="false"
+        app:showFullscreenOption="false"
+        app:showMenuOption="false"
+        app:showOriginalControls="false"
+        app:showTitle="true"
+        app:topicColor="@color/accent" />
+
+
+</FrameLayout>

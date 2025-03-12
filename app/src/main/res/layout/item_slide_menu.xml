@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="45dp"
+    android:layout_marginTop="@dimen/margin_8"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_effect_corner_10"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/slideMenuItemImg"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/slideMenuItemTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_8"
+        android:fontFamily="@font/medium"
+        android:minWidth="80dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_15d"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/slideMenuItemCountTv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_8"
+        android:background="@drawable/circle_red"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:paddingStart="2dp"
+        android:paddingTop="1dp"
+        android:paddingEnd="2dp"
+        android:paddingBottom="1dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_9d"
+        android:visibility="gone"
+        tools:ignore="RtlHardcoded" />
+
+
+</LinearLayout>

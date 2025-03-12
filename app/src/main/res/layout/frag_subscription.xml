@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/subscriptionHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_1dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/subscriptionActivePlanImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-8dp"
+                android:background="@drawable/circle_light_green"
+                android:padding="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/subscriptionActivePlanTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_shield_done_light_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/subscriptionRemainedDownloadsImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_blue"
+                android:padding="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/subscriptionRemainedDownloadsTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_download_blue" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/subscriptionRemainedDaysImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_yellow"
+                android:padding="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/subscriptionRemainedDaysTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_calendar_yellow" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscriptionActivePlanTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/subscriptionActivePlanKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/subscriptionActivePlanImg"
+                app:layout_constraintStart_toStartOf="@+id/subscriptionActivePlanImg"
+                app:layout_constraintTop_toBottomOf="@+id/subscriptionActivePlanImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscriptionRemainedDownloadsTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/subscriptionRemainedDownloadsKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/subscriptionRemainedDownloadsImg"
+                app:layout_constraintStart_toStartOf="@+id/subscriptionRemainedDownloadsImg"
+                app:layout_constraintTop_toBottomOf="@+id/subscriptionRemainedDownloadsImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscriptionRemainedDaysTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/subscriptionRemainedDaysKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/subscriptionRemainedDaysImg"
+                app:layout_constraintStart_toStartOf="@+id/subscriptionRemainedDaysImg"
+                app:layout_constraintTop_toBottomOf="@+id/subscriptionRemainedDaysImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscriptionActivePlanKeyTv"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/regular"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="@string/active_plan"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/subscriptionActivePlanImg"
+                app:layout_constraintStart_toStartOf="@+id/subscriptionActivePlanImg"
+                app:layout_constraintTop_toBottomOf="@+id/subscriptionRemainedDaysTv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscriptionRemainedDownloadsKeyTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="@string/remained_downloads"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/subscriptionRemainedDownloadsImg"
+                app:layout_constraintStart_toStartOf="@+id/subscriptionRemainedDownloadsImg"
+                app:layout_constraintTop_toBottomOf="@+id/subscriptionRemainedDownloadsTv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subscriptionRemainedDaysKeyTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="@string/remained_days"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/subscriptionRemainedDaysImg"
+                app:layout_constraintStart_toStartOf="@+id/subscriptionRemainedDaysImg"
+                app:layout_constraintTop_toBottomOf="@+id/subscriptionRemainedDaysTv"
+                tools:ignore="SpUsage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/subscriptionUserEmptyState"
+            layout="@layout/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/subscriptionPlanEmptyState"
+            layout="@layout/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subscriptionHeaderContainer"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_32"
+            android:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subscriptionPlanTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subscriptionHeaderContainer"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/select_a_plan"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="SpUsage" />
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/subscriptionViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subscriptionPlanTv"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:padding="@dimen/zero" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/subscriptionIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subscriptionViewPager"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_24"
+            android:padding="@dimen/zero"
+            app:dotsColor="@color/gray81"
+            app:dotsSize="10dp"
+            app:dotsSpacing="5dp"
+            app:dotsWidthFactor="2.5"
+            app:layout_constraintVertical_bias="0.5"
+            app:progressMode="false"
+            app:selectedDotColor="@color/accent" />
+
+    </RelativeLayout>
+
+</ScrollView>

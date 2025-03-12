@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:bottom="14dp"
+        android:drawable="@drawable/ic__play"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="14dp" />
+
+    <item>
+        <shape android:shape="oval">
+            <stroke
+                android:width="1dp"
+                android:color="#e7e7e7" />
+        </shape>
+
+    </item>
+</layer-list>

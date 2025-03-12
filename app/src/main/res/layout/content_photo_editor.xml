@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:src="@drawable/logo"
+        android:scaleType="fitXY"
+
+        />
+
+    <Button
+        android:id="@+id/openGallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+
+        android:text="PICK FROM GALLERY"
+        android:textColor="#4C4C4C"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+<!--android:background="@drawable/button_launcher_background"-->
+    <Button
+        android:id="@+id/openCamera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+
+        android:text="TAKE FROM CAMERA"
+        android:textColor="#4C4C4C"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+<!--android:background="@drawable/button_launcher_background"-->
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""
+        android:visibility="gone" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/showVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|start"
+        android:text="1.0.0"
+        android:textColor="#4C4C4C"
+        android:textSize="12sp" />
+
+</LinearLayout>

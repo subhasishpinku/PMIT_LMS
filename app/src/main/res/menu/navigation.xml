@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_categories"
+        android:icon="@drawable/ic_home"
+        android:title="@string/homme" />
+
+    <item
+        android:id="@+id/recommand"
+        android:icon="@drawable/ic_collection"
+        android:title="@string/mycollection" />
+
+    <item
+        android:id="@+id/feed"
+        android:icon="@drawable/ic_user"
+        android:title="@string/myaccount" />
+
+<!--    <item-->
+<!--        android:id="@+id/user"-->
+<!--        android:icon="@drawable/ic_baseline_star_24"-->
+<!--        android:title="@string/home_page" />-->
+
+</menu>
+ 

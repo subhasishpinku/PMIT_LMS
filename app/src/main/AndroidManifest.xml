@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dgc.photoediting">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature
+        android:glEsVersion="0x00030001"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+    <application
+        android:name="com.dgc.photoediting.PhotoApp"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="GoogleAppIndexingWarning, UnusedAttribute">
+        <!--<activity
+            android:name="com.dgc.photoediting.EditImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        -->
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
+        <activity
+            android:name="com.dgc.photoediting.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@string/app_intent_name"
+                android:scheme="file"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="action_nextgen_edit" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dgc.photoediting.frame.ChooseFrameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.frame.SelectedImageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.NavigationDrawerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.Termsconditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dgc.photoediting.Privacypolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".editor.PhotoEditorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".crop.CropActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+        <activity
+            android:name=".sticker.ui.StickerSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sticker.ui.StickerMainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.dgc.photoediting.masksegment.MainActivitySegment"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.masksegment.MaskCameraView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.masksegment.BackgroundChangeView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.masksegment.ImageSegmentView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.dgc.photoediting.stylesegment.RealTimeDeepStyleViewStyle"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.stylesegment.ImageSegmentViewStyle"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.stylesegment.MainActivityStyle"
+            android:label=""
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.dgc.photoediting.emotionrecognition.MaskCameraView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.emotionrecognition.WithoutFaceDetectView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.emotionrecognition.EmotionImageView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.emotionrecognition.MainActivityemotion"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.hairsegment.MaskCameraViewhair"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.hairsegment.HairColorChangeView"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.dgc.photoediting.hairsegment.ImageSegmentViewhair"
+            android:label=""
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.dgc.photoediting.hairsegment.MainActivityhair"
+            android:label=""
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".Cutselfi_ScreenA"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cutselfi_ScreenB"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cutselfi_ScreenC"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Confirm_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EffectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnniversaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".KidsphotoshootActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EngagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BirthdayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mycollection.ImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mycollection.FullImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
+
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity
+
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
+
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity
+
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
+
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
+
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity
+
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
+
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dgc.photoediting.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+        <activity
+            android:name=".image3d.augmentedimage.AugmentedImageActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.ar.API_KEY"
+            android:value="AIzaSyAugxUODh0dPlCP1-tNuDtn1I-8t8OTAEk" />
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+
+        <activity
+            android:name="com.dgc.photoediting.faceplus.FaceppActionActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.dgc.photoediting.faceplus.OpenglActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.dgc.photoediting.faceplus.FeatureInfoSettingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.dgc.photoediting.faceplus.LoadingActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.dgc.photoediting.DasboardActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.dgc.photoediting.Catagories_Activity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.dgc.photoediting.argear.ui.PlayerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.dgc.photoediting.argear.ui.ImageViewerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.dgc.photoediting.argear.ui.CameraActivity"
+            android:screenOrientation="portrait"></activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/APP_ID"/>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>

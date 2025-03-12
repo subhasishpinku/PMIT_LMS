@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:layout_marginBottom="40sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/cute_selfi_spashscreen" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_camera"
+            android:layout_marginRight="10sp"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Camera"
+            />
+        <Button
+            android:layout_weight="1"
+            android:layout_marginLeft="10sp"
+            android:background="@color/colorAccent"
+            android:id="@+id/btn_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

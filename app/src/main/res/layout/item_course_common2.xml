@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_course_common_card2"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <View
+        android:id="@+id/item_course_common2_top_dash"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dash_connector"
+        android:rotation="90"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/item_course_common2_img"
+        app:layout_constraintEnd_toEndOf="@+id/item_course_common2_img"
+        app:layout_constraintStart_toStartOf="@+id/item_course_common2_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_course_common2_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:background="@drawable/round_view_accent_corner10"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_video_white" />
+
+    <View
+        android:id="@+id/item_course_common2_bottom_dash"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dash_connector"
+        android:rotation="90"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/item_course_common2_img"
+        app:layout_constraintStart_toStartOf="@+id/item_course_common2_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_course_common2_img" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_course_common2_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/bold"
+        android:maxLines="1"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_13d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/item_course_common2_desc_tv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_course_common2_img"
+        app:layout_constraintTop_toTopOf="@id/item_course_common2_img"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_course_common2_desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:maxLines="1"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="@id/item_course_common2_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_course_common2_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_course_common2_title_tv"
+        tools:ignore="SpUsage" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_course_common2_check_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_course_common2_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/item_course_common2_img"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

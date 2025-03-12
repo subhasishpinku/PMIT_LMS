@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aboutus"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        tools:ignore="MissingConstraints,RtlCompat"
+        android:minHeight="@dimen/abc_action_bar_default_height_material">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/main_motion_text_entity_edit_panel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_decrease"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_neg_1"
+            />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_increase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_plus_1"
+            />
+
+        <ImageButton
+            android:id="@+id/text_entity_color_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_format_color_text"
+            />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_text_fields"
+            />
+
+        <ImageButton
+            android:id="@+id/text_entity_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_mode_edit"
+            />
+
+    </LinearLayout>
+    <com.dgc.photoediting.sticker.widget.MotionView
+        android:layout_below="@+id/main_motion_text_entity_edit_panel"
+        android:id="@+id/main_motion_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_marginLeft="25sp"
+            app:backgroundTint="#99CC00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_gravity="left|bottom"
+            app:elevation="6dp"
+            android:layout_marginBottom="20sp"
+            app:pressedTranslationZ="12dp"/>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extended_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|right"
+            android:contentDescription="@string/add_text"
+            android:text="@string/add_text"
+            app:icon="@drawable/ic_add_text"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:background="@drawable/round_view_white_corner15"
+    android:foreground="@drawable/ripple_effect_corner_15"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_notice_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_notice_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_notice_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/bold"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/text_color5"
+        android:textSize="@dimen/textsize_13d"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/item_notice_vertical_guideline"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_notice_img"
+        app:layout_constraintTop_toTopOf="@id/item_notice_img"
+        tools:ignore="SpUsage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_notice_creator_name_img"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="@id/item_notice_img"
+        app:layout_constraintStart_toEndOf="@+id/item_notice_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_notice_vertical_guideline"
+        app:srcCompat="@drawable/ic_profile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_notice_creator_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="@id/item_notice_img"
+        app:layout_constraintEnd_toEndOf="@+id/item_notice_horizontal_guideline"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_notice_creator_name_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_notice_vertical_guideline"
+        tools:ignore="SpUsage" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_notice_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.58" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_notice_date_img"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="@+id/item_notice_img"
+        app:layout_constraintStart_toEndOf="@+id/item_notice_horizontal_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/item_notice_vertical_guideline"
+        app:srcCompat="@drawable/ic_calendar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_notice_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/regular"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintBottom_toBottomOf="@id/item_notice_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/item_notice_date_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_notice_vertical_guideline"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/pageBg"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/course_details_special_offer_container"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/course_details_special_offer_inner_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_view_1dp"
+                android:paddingTop="@dimen/margin_8"
+                android:paddingBottom="@dimen/margin_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/course_details_special_offer_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_discount_green" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_4"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/special_offer"
+                    android:textColor="@color/accent"
+                    android:textSize="@dimen/textsize_14d"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/course_details_special_offer_img"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/course_details_special_offer_img"
+                    app:layout_constraintTop_toTopOf="@id/course_details_special_offer_img"
+                    tools:ignore="SpUsage" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingEnd="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_8"
+                    >
+
+                    <com.robinhood.ticker.TickerView
+                        android:id="@+id/course_details_special_offer_seconds_ticker_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/textsize_16d"
+                        app:layout_constraintBottom_toTopOf="@+id/course_details_special_offer_seconds_tv"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:ignore="SpUsage" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/course_details_special_offer_seconds_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/second_short"
+                        android:textColor="@color/gray81"
+                        android:textSize="@dimen/textsize_13d"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="@+id/course_details_special_offer_seconds_ticker_view"
+                        app:layout_constraintLeft_toLeftOf="@+id/course_details_special_offer_seconds_ticker_view"
+                        app:layout_constraintTop_toBottomOf="@+id/course_details_special_offer_seconds_ticker_view"
+                        tools:ignore="SpUsage" />
+
+                    <com.robinhood.ticker.TickerView
+                        android:id="@+id/course_details_special_offer_mins_ticker_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/textsize_16d"
+                        app:layout_constraintBottom_toTopOf="@+id/course_details_special_offer_mins_tv"
+                        app:layout_constraintRight_toLeftOf="@+id/course_details_special_offer_seconds_ticker_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:ignore="SpUsage" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/course_details_special_offer_mins_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/min_short"
+                        android:textColor="@color/gray81"
+                        android:textSize="@dimen/textsize_13d"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="@+id/course_details_special_offer_mins_ticker_view"
+                        app:layout_constraintLeft_toLeftOf="@+id/course_details_special_offer_mins_ticker_view"
+                        app:layout_constraintTop_toBottomOf="@+id/course_details_special_offer_mins_ticker_view"
+                        tools:ignore="SpUsage" />
+
+                    <com.robinhood.ticker.TickerView
+                        android:id="@+id/course_details_special_offer_hours_ticker_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/textsize_16d"
+                        app:layout_constraintBottom_toTopOf="@+id/course_details_special_offer_hours_tv"
+                        app:layout_constraintRight_toLeftOf="@+id/course_details_special_offer_mins_ticker_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:ignore="SpUsage" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/course_details_special_offer_hours_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/hour_short"
+                        android:textColor="@color/gray81"
+                        android:textSize="@dimen/textsize_13d"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="@+id/course_details_special_offer_hours_ticker_view"
+                        app:layout_constraintLeft_toLeftOf="@+id/course_details_special_offer_hours_ticker_view"
+                        app:layout_constraintTop_toBottomOf="@+id/course_details_special_offer_hours_ticker_view"
+                        tools:ignore="SpUsage" />
+
+                    <com.robinhood.ticker.TickerView
+                        android:id="@+id/course_details_special_offer_days_ticker_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent"
+                        android:textSize="@dimen/textsize_16d"
+                        app:layout_constraintBottom_toTopOf="@+id/course_details_special_offer_days_tv"
+                        app:layout_constraintRight_toLeftOf="@+id/course_details_special_offer_hours_ticker_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:ignore="SpUsage" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/course_details_special_offer_days_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/day_short"
+                        android:textColor="@color/gray81"
+                        android:textSize="@dimen/textsize_13d"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="@+id/course_details_special_offer_days_ticker_view"
+                        app:layout_constraintLeft_toLeftOf="@+id/course_details_special_offer_days_ticker_view"
+                        app:layout_constraintTop_toBottomOf="@+id/course_details_special_offer_days_ticker_view"
+                        tools:ignore="SpUsage" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:background="@drawable/round_view_accent_corner10"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/course_details_special_offer_percent_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/bold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_20d"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/off"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_11d"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_details_special_offer_container"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_in_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_details_title_tv"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_category_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintStart_toEndOf="@+id/course_details_in_tv"
+            app:layout_constraintTop_toTopOf="@+id/course_details_in_tv"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_rating_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_gray_corner10"
+            android:fontFamily="@font/regular"
+            android:paddingStart="@dimen/margin_8"
+            android:paddingEnd="@dimen/margin_8"
+            android:textColor="@color/gull_gray"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintBottom_toBottomOf="@+id/course_details_in_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpUsage" />
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:id="@+id/course_details_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            app:layout_constraintBottom_toBottomOf="@+id/course_details_rating_count_tv"
+            app:layout_constraintEnd_toStartOf="@+id/course_details_rating_count_tv"
+            app:layout_constraintTop_toTopOf="@+id/course_details_rating_count_tv"
+            app:srb_drawBorderEnabled="false"
+            app:srb_fillColor="@color/gold"
+            app:srb_isIndicator="true"
+            app:srb_numberOfStars="5"
+            app:srb_rating="0"
+            app:srb_starBackgroundColor="@color/gray81"
+            app:srb_starCornerRadius="15"
+            app:srb_starSize="15dp"
+            app:srb_starsSeparation="0dp"
+            app:srb_stepSize="0.1" />
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/pageBg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_details_rating_count_tv">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/course_details_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pageBg">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:statusBarScrim="@null">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/course_details_collapsing_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/pageBg"
+                        android:paddingStart="@dimen/margin_16"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:paddingBottom="@dimen/margin_16">
+
+                        <com.google.android.exoplayer2.ui.StyledPlayerView
+                            android:id="@+id/course_details_player_view"
+                            android:layout_width="0dp"
+                            android:layout_height="270dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:surface_type="surface_view"
+                            app:use_controller="false" />
+
+                        <include
+                            android:id="@+id/course_details_player_controller_view"
+                            layout="@layout/player_controller"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:background="@drawable/round_view_white_corner20"
+                            android:paddingStart="@dimen/padding_16"
+                            android:paddingEnd="@dimen/padding_16"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/course_details_player_view" />
+
+                        <com.online.course.ui.widget.RoundishImageView
+                            android:id="@+id/course_details_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            android:scaleType="fitXY"
+                            android:visibility="gone"
+                            app:cornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:roundedCorners="all" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/course_details_instructor_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect"
+                            app:layout_constraintBottom_toBottomOf="@+id/course_details_more_btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/course_details_more_btn">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/course_details_instructor_img"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/circle_white"
+                                android:elevation="1dp"
+                                app:civ_border_overlay="true"
+                                app:civ_border_width="0dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/course_details_instructor_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_8"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/text_color3"
+                                android:textSize="@dimen/textsize_13d"
+                                app:layout_constraintStart_toEndOf="@+id/course_details_instructor_img"
+                                app:layout_constraintTop_toTopOf="@+id/course_details_instructor_img"
+                                tools:ignore="SpUsage" />
+
+                            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                                android:id="@+id/course_details_instructor_rating_bar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_8"
+                                app:layout_constraintBottom_toBottomOf="@+id/course_details_instructor_img"
+                                app:layout_constraintStart_toEndOf="@+id/course_details_instructor_img"
+                                app:srb_drawBorderEnabled="false"
+                                app:srb_fillColor="@color/gold"
+                                app:srb_isIndicator="true"
+                                app:srb_numberOfStars="5"
+                                app:srb_rating="0"
+                                app:srb_starBackgroundColor="@color/gray81"
+                                app:srb_starCornerRadius="15"
+                                app:srb_starSize="15dp"
+                                app:srb_starsSeparation="0dp"
+                                app:srb_stepSize="0.1" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/course_details_more_btn"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="@dimen/margin_16"
+                            android:background="@drawable/round_view_white_corner20"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_circular"
+                            android:padding="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/course_details_player_controller_view"
+                            app:srcCompat="@drawable/ic_more" />
+
+                        <include
+                            android:id="@+id/course_details_instructor_not_available_container"
+                            layout="@layout/header_info_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_16"
+                            android:background="@drawable/bordered_view"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/course_details_more_btn" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/courseDetailsTabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    app:layout_collapseMode="pin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabIndicatorColor="@color/text_color5"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/rippleColor"
+                    app:tabSelectedTextColor="@color/text_color5"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    app:tabTextColor="@color/text_color5" />
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/courseDetailsViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/course_details_purchase_btns_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_view_white_top_corner20"
+        android:elevation="0.1dp"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_price_key_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:text="@string/price"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintBottom_toTopOf="@+id/course_details_enroll_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <ProgressBar
+            android:id="@+id/course_details_linear_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_drawable_accent"
+            android:progressTint="@color/accent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/course_details_enroll_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_details_price_key_tv" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_price_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintBottom_toTopOf="@+id/course_details_enroll_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/course_details_price_with_discount_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_13d"
+            app:layout_constraintBottom_toTopOf="@+id/course_details_enroll_btn"
+            app:layout_constraintEnd_toStartOf="@+id/course_details_price_value_tv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/course_details_enroll_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/enroll_on_class"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/course_details_subscribe_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/course_details_subscribe_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/subscribe"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textsize_13d"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/course_details_enroll_btn"
+            app:rippleColor="@color/rippleColor"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="1dp"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

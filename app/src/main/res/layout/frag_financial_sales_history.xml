@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/financialSalesHistoryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_1dp"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/financialSalesHistoryClassSalesImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_green"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryClassSalesCountTv"
+                app:layout_constraintEnd_toStartOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_video_green" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/financialSalesHistoryMeetingSalesImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_blue"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryMeetingSalesCountTv"
+                app:layout_constraintEnd_toStartOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintStart_toEndOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_user_blue" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/financialSalesHistoryTotalSalesImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_light_yellow"
+                android:padding="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryTotalSalesCountTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_calendar_yellow" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryClassSalesCountTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryClassSalesKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryClassSalesImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryMeetingSalesCountTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryMeetingSalesKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryMeetingSalesImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryTotalSalesCountTv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryTotalSalesKeyTv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryTotalSalesImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryClassSalesKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/class_sales"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryClassSalesTv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryClassSalesCountTv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryMeetingSalesKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="@string/meeting_sales"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryMeetingSalesTv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryMeetingSalesCountTv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryTotalSalesKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:text="@string/total_sales"
+                android:textColor="@color/gull_gray"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toTopOf="@+id/financialSalesHistoryTotalSalesTv"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryTotalSalesCountTv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryClassSalesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:textColor="@color/light_green"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryClassSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryClassSalesKeyTv"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryMeetingSalesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryMeetingSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryMeetingSalesKeyTv"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/financialSalesHistoryTotalSalesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintStart_toStartOf="@+id/financialSalesHistoryTotalSalesImg"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryTotalSalesKeyTv"
+                tools:ignore="SpUsage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/financialSalesHistoryTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/sales_history"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryContainer"
+            tools:ignore="SpUsage" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/financialSalesHistoryRvProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <include
+                android:id="@+id/financialSalesHistoryEmptyState"
+                layout="@layout/empty_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryTv" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/financialSalesHistoryRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_16"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/financialSalesHistoryTv"
+                app:spanCount="1" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

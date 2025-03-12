@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/meetingDetailsBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pageBg">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsOuterCircleImg"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_orange"
+                android:elevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_white"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintEnd_toEndOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintTop_toTopOf="@id/meetingDetailsOuterCircleImg" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_orange"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintEnd_toEndOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintTop_toTopOf="@id/meetingDetailsOuterCircleImg" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/meetingDetailsUserImg"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:elevation="1.1dp"
+                android:src="@color/gray"
+                app:civ_border_overlay="true"
+                app:civ_border_width="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintEnd_toEndOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsOuterCircleImg"
+                app:layout_constraintTop_toTopOf="@id/meetingDetailsOuterCircleImg" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsUserNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_20d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/meetingDetailsOuterCircleImg"
+                tools:ignore="SpUsage" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsUserTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsUserNameTv"
+                tools:ignore="SpUsage" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsCallBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/circle_light_green"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                android:foreground="@drawable/ripple_effect_circular"
+                android:padding="17dp"
+                app:layout_constraintEnd_toStartOf="@+id/meetingDetailsEmailBtn"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsUserTypeTv"
+                app:srcCompat="@drawable/ic_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsEmailBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginStart="@dimen/margin_16"
+                android:background="@drawable/circle_light_blue"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect_circular"
+                android:padding="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsCallBtn"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsUserTypeTv"
+                app:srcCompat="@drawable/ic_email" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/meetingDetailsGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsStartDateImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsCallBtn"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/start_date"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsStartDateImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsStartDateImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsStartDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsStartDateImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsStartDateImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsDurationImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsCallBtn"
+                app:srcCompat="@drawable/ic_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/duration"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsDurationImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsDurationImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsDurationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsDurationImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsDurationImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsStartTimeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsStartDateImg"
+                app:srcCompat="@drawable/ic_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/start_time"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsStartTimeImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsStartTimeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsStartTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsStartTimeImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsStartTimeImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsEndTimeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsDurationImg"
+                app:srcCompat="@drawable/ic_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/end_time"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsEndTimeImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsEndTimeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsEndTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsEndTimeImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsEndTimeImg"
+                tools:ignore="SpUsage" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingCondutionTypeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsStartTimeImg"
+                app:srcCompat="@drawable/ic_video_gray" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/conduction_type"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingCondutionTypeImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingCondutionTypeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsCondutionTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingCondutionTypeImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingCondutionTypeImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsMeetingTypeImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsEndTimeImg"
+                app:srcCompat="@drawable/ic_user" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/meeting_type"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsMeetingTypeImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsMeetingTypeImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsMeetingTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsMeetingTypeImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsMeetingTypeImg"
+                tools:ignore="SpUsage" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsAmountImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingCondutionTypeImg"
+                app:srcCompat="@drawable/ic_wallet" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/amount"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsAmountImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsAmountImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsAmountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsAmountImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsAmountImg"
+                tools:ignore="SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/meetingDetailsStatusImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/circle_gray"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="@id/meetingDetailsGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsMeetingTypeImg"
+                app:srcCompat="@drawable/ic_more_circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/regular"
+                android:text="@string/status"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_11d"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsStatusImg"
+                app:layout_constraintTop_toTopOf="@+id/meetingDetailsStatusImg"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/meetingDetailsStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/textsize_12d"
+                app:layout_constraintBottom_toBottomOf="@+id/meetingDetailsStatusImg"
+                app:layout_constraintStart_toEndOf="@+id/meetingDetailsStatusImg"
+                tools:ignore="SpUsage" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/meetingDetailsDescriptionLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsStatusImg"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_1dp"
+                android:padding="@dimen/padding_16"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:includeFontPadding="false"
+                    android:text="@string/descrption"
+                    android:textSize="@dimen/textsize_14d"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/meetingDetailsDescriptionTv"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/gull_gray"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:textSize="@dimen/textsize_12d"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/meetingDetailsAddressLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meetingDetailsDescriptionLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_1dp"
+                android:padding="@dimen/padding_16"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color5"
+                    android:includeFontPadding="false"
+                    android:text="@string/address"
+                    android:textSize="@dimen/textsize_14d"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/meetingDetailsAddressTv"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/gull_gray"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:textSize="@dimen/textsize_12d"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/meetingDetailsBtnsContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/meetingDetailsMainBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/button_selector"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/meetingDetailsMoreBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/meetingDetailsMoreBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_accent_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/meetingDetailsMainBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_more_accent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

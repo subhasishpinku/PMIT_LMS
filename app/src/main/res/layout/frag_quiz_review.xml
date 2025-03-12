@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/pageBg">
+
+    <View
+        android:id="@+id/quizReviewStatusbar"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:background="@color/accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quizReviewHeaderContainer"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/round_view_accent_bottom_corner20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizReviewStatusbar">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizReviewHeaderTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:layout_constraintBottom_toBottomOf="@+id/quizReviewHeaderBackBtn"
+            app:layout_constraintStart_toEndOf="@id/quizReviewHeaderBackBtn"
+            app:layout_constraintTop_toTopOf="@+id/quizReviewHeaderBackBtn"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/quizReviewHeaderBackBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_balack_opacity_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_corner_20"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizReviewHeaderTitleKeyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/bold"
+            android:text="@string/quiz_review"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_18d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizReviewHeaderBackBtn"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizReviewHeaderDescTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizReviewHeaderTitleKeyTv"
+            tools:ignore="SpUsage" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizHeaderQuestionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:text="@string/question"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizReviewHeaderDescTv"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quizHeaderQuestionCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizReviewHeaderDescTv"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:scaleX="1.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/circular_wave" />
+
+        <ProgressBar
+            android:id="@+id/quizReviewHeaderLinearProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/bordered_view_white_1dp"
+            android:indeterminate="false"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:progressTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizHeaderQuestionTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quizReviewQuestionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_15d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizReviewHeaderContainer"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quizReviewGradeTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/gull_gray"
+        android:textSize="@dimen/textsize_11d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizReviewQuestionTv"
+        tools:ignore="SpUsage" />
+
+    <!--    <GridView-->
+    <!--        android:id="@+id/quizAnswersGrid"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="@dimen/margin_8"-->
+    <!--        android:layout_marginBottom="@dimen/margin_8"-->
+    <!--        android:choiceMode="singleChoice"-->
+    <!--        android:drawSelectorOnTop="false"-->
+    <!--        android:fadeScrollbars="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:horizontalSpacing="15dp"-->
+    <!--        android:listSelector="@android:color/transparent"-->
+    <!--        android:numColumns="2"-->
+    <!--        android:padding="15dp"-->
+    <!--        android:scrollbars="vertical"-->
+    <!--        android:stretchMode="columnWidth"-->
+    <!--        android:verticalSpacing="15dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/quizReviewBtnsContainer"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/quizReviewDescTv" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quizReviewAnswersRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_8"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/quizReviewBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizReviewGradeTv"
+        app:spanCount="2" />
+
+
+    <ScrollView
+        android:id="@+id/quizReviewDescriptiveAnswerContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:fillViewport="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/quizReviewBtnsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizReviewGradeTv">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizReviewUserAnswerTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quizReviewHeaderContainer"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizReviewUserAnswerTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_bg_lightgray_border_gray_1dp_corner20"
+                android:fontFamily="@font/regular"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/textsize_13d" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizReviewUserCorrectAnswerTitleKeyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/correct_answer"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_15d"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quizReviewHeaderContainer"
+                tools:ignore="SpUsage" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/quizReviewUserCorrectAnswerEdtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_bg_white_border_gray_1dp_corner20"
+                android:fontFamily="@font/regular"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_13d"
+                android:visibility="gone" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quizReviewUserCorrectAnswerTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/bordered_view_bg_white_border_gray_1dp_corner20"
+                android:fontFamily="@font/regular"
+                android:gravity="start|top"
+                android:minHeight="100dp"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/textsize_13d" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_16">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/quizReviewUserGradeTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_15d"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/quizReviewHeaderContainer"
+                    tools:ignore="SpUsage" />
+
+                <include
+                    android:id="@+id/quizReviewGradeCounter"
+                    layout="@layout/counter"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/quizReviewDescriptiveGradeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textsize_16d" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quizReviewBtnsContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_view_white_top_corner20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quizReviewPreviousBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:fontFamily="@font/regular"
+            android:tag="left"
+            android:text="@string/previous"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/quizReviewNextFinishBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="1dp"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quizReviewNextFinishBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:tag="right"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/accent"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/quizReviewPreviousBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

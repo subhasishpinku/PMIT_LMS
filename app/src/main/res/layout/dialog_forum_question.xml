@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/forum_question_cancel_btn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin_4">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forum_question_header_tv"
+
+                android:layout_gravity="start|top"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/bold"
+                android:text="@string/new_question"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/textsize_15d" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/forum_question_title_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtx_height_size"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:hint="@string/title"
+                android:inputType="text"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/gull_gray"
+                android:textSize="@dimen/textsize_15d" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/forum_question_desc_edtx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/round_view_white_with_border_corner20"
+                android:fontFamily="@font/regular"
+                android:gravity="start|top"
+                android:hint="@string/descrption"
+                android:inputType="textMultiLine"
+                android:minHeight="160dp"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_16"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/gull_gray"
+                android:textSize="@dimen/textsize_15d" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_24"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/forum_question_send_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:fontFamily="@font/regular"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:maxWidth="400dp"
+                    android:text="@string/send"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_15d"
+                    app:backgroundTint="@color/button_selector"
+                    app:cornerRadius="@dimen/btn_corner_radius"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/forum_question_attach_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/forum_question_attach_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:background="@drawable/bordered_view_accent_corner20"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect_corner_20"
+                    android:padding="17dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/forum_question_send_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_attachment_accent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

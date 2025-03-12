@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBg"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/categoriesTrendingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:text="@string/trending"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_15d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <ProgressBar
+        android:id="@+id/categoriesTrendingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/categoriesTrendingRv"
+        app:layout_constraintEnd_toEndOf="@id/categoriesTrendingRv"
+        app:layout_constraintStart_toStartOf="@id/categoriesTrendingRv"
+        app:layout_constraintTop_toTopOf="@+id/categoriesTrendingRv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesTrendingRv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesTrendingTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/categoriesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/regular"
+        android:text="@string/browse_categories"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_15d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesTrendingRv"
+        tools:ignore="SpUsage" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesExpandableRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_16"
+        android:elevation="0dp"
+        android:background="@drawable/round_view_white_corner15"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesTv" />
+
+    <ProgressBar
+        android:id="@+id/categoriesProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/categoriesExpandableRv"
+        app:layout_constraintEnd_toEndOf="@id/categoriesExpandableRv"
+        app:layout_constraintStart_toStartOf="@id/categoriesExpandableRv"
+        app:layout_constraintTop_toTopOf="@+id/categoriesExpandableRv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

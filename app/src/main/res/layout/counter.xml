@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="130dp"
+    android:layout_height="53dp"
+    android:background="@drawable/round_view_lighgray_corner15">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/counterMinus"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_4"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:insetTop="@dimen/margin_4"
+        android:insetBottom="@dimen/margin_4"
+        android:padding="0dp"
+        android:text="@string/minus"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color4"
+        android:textSize="@dimen/textsize_16d"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/rippleColor"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/counterPlus"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:fontFamily="@font/medium"
+        android:insetTop="@dimen/margin_4"
+        android:insetBottom="@dimen/margin_4"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/plus"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color4"
+        android:textSize="@dimen/textsize_16d"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/btn_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/rippleColor"
+        tools:ignore="SpUsage" />
+
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/counterTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/one"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_16d"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/counterPlus"
+        app:layout_constraintStart_toEndOf="@+id/counterMinus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/counterEdtx"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:digits="0123456789."
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_16d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/counterPlus"
+        app:layout_constraintStart_toEndOf="@+id/counterMinus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

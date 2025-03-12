@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <TextView
+        android:id="@+id/createAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="75dp"
+        android:text="Create Account"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/mobileEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createAccountText"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="50dp"
+        android:hint="Mobile Number"
+        android:textColorHint="#000"></EditText>
+
+    <EditText
+        android:id="@+id/emailEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobileEdit"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        android:hint="Email ID"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000"></EditText>
+
+    <EditText
+        android:id="@+id/passwordEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailEdit"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#000"></EditText>
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordEdit"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="75dp"
+        android:text="Sign up"
+        android:textColor="#fff"
+        android:background="@drawable/button_corner_style"></Button>
+
+    <TextView
+        android:id="@+id/alreadyRegistered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpButton"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="75dp"
+        android:text="Already Register?"
+        android:textColor="#000"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alreadyRegistered"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:text="Login"
+        android:textColor="#000"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/termsConditionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:text="Terms And Condition"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"></TextView>
+
+    <TextView
+        android:id="@+id/privacyPolicyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#000"></TextView>
+
+</RelativeLayout>

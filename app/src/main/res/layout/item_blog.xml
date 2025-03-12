@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_effect_corner_15"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="@dimen/padding_16">
+
+        <com.online.course.ui.widget.RoundishImageView
+            android:id="@+id/itemBlogImg"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCorners="all" />
+
+        <View
+            android:id="@+id/itemBlogImgOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/gradient_bg_corner15"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/itemBlogImg"
+            app:layout_constraintEnd_toEndOf="@+id/itemBlogImg"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="@+id/itemBlogImg" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/itemBlogAuthorImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:src="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/itemBlogImg"
+            app:layout_constraintStart_toStartOf="@+id/itemBlogImg" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBlogAuthorNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constraintBottom_toBottomOf="@+id/itemBlogAuthorImg"
+            app:layout_constraintStart_toEndOf="@+id/itemBlogAuthorImg"
+            app:layout_constraintTop_toTopOf="@+id/itemBlogAuthorImg" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBlogTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/textsize_14d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemBlogImg" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBlogDescTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemBlogTitleTv" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemBlogClockImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemBlogDescTv"
+            app:srcCompat="@drawable/ic_calendar" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBlogDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color3"
+            android:layout_marginStart="@dimen/margin_4"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintBottom_toBottomOf="@id/itemBlogClockImg"
+            app:layout_constraintStart_toEndOf="@+id/itemBlogClockImg"
+            app:layout_constraintTop_toTopOf="@+id/itemBlogClockImg"
+            tools:ignore="SpUsage" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemBlogCommentImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintStart_toEndOf="@id/itemBlogDateTv"
+            app:layout_constraintTop_toBottomOf="@+id/itemBlogDescTv"
+            app:srcCompat="@drawable/ic_more_circle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/itemBlogCommentCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:fontFamily="@font/regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/textsize_11d"
+            app:layout_constraintBottom_toBottomOf="@id/itemBlogCommentImg"
+            app:layout_constraintStart_toEndOf="@+id/itemBlogCommentImg"
+            app:layout_constraintTop_toTopOf="@+id/itemBlogCommentImg"
+            tools:ignore="SpUsage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

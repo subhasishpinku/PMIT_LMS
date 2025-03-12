@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_view_white_top_corner30"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/finalize_your_account"
+            android:textColor="@color/text_color4"
+            android:textSize="@dimen/textsize_20d" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userRegistrationNameEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_with_border_corner20"
+            android:drawableStart="@drawable/ic_message"
+            android:drawablePadding="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:hint="@string/your_name"
+            android:inputType="text"
+            android:maxLength="128"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/gull_gray"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userRegistrationReferralEdtx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtx_height_size"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_with_border_corner20"
+            android:drawableStart="@drawable/ic_message"
+            android:drawablePadding="@dimen/margin_16"
+            android:fontFamily="@font/regular"
+            android:hint="@string/referral_code"
+            android:inputType="text"
+            android:maxLength="30"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/gull_gray"
+            android:textSize="@dimen/textsize_15d"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/userRegistrationContinueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:enabled="false"
+            android:fontFamily="@font/regular"
+            android:minWidth="170dp"
+            android:text="@string/_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15d"
+            app:backgroundTint="@color/button_selector"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signInPasswordEdtx"
+            app:rippleColor="@color/rippleColor"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+

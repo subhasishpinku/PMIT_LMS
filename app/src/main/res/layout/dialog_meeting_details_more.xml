@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/meetingDetailsCancelBtn"
+            android:layout_width="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/round_view_white_corner20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect_circular"
+            android:padding="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/signUpEmailPhoneEdtx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFacebookLayout"
+            app:srcCompat="@drawable/ic_x_black" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/round_view_white_top_corner30"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/bold"
+            android:text="@string/meeting_options"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_20d" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/meetingDetailsAddToCalendarTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_calendar_stroke"
+            android:drawablePadding="@dimen/margin_4"
+            android:focusable="true"
+            android:fontFamily="@font/regular"
+            android:foreground="@drawable/ripple_effect"
+            android:gravity="start|center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/add_to_calendar"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_15d" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/meetingDetailsMoreFinishMeetingTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_margin="@dimen/margin_16"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_done_stroke"
+            android:drawablePadding="@dimen/margin_4"
+            android:focusable="true"
+            android:fontFamily="@font/regular"
+            android:foreground="@drawable/ripple_effect"
+            android:gravity="start|center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/finish_meeting"
+            android:textColor="@color/text_color5"
+            android:textSize="@dimen/textsize_15d" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
